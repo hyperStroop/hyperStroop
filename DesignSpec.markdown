@@ -38,7 +38,9 @@ Two primary pages - Instructions/example and then the actual game. Leaderboards 
 * Answers can be chosen from 3 keys (presumed: F, Space Key, J) that will have labels on the screen (colors labeled on keys will stay constant throughout the game)
 * Personal best score will be stored locally.
 
+## Wireframes
 
+![alt text](hyperStroop/1.jpg "1")
 
 
 
