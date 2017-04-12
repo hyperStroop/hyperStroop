@@ -29,14 +29,14 @@ When shown the word "blue" written in yellow text, the correct response by the p
 Two primary pages - Instructions/example and then the actual game. Leaderboards are shown upon game completion.
 
 ### Measurements: 
-Speed, accuracy, predetermined rankings (You’re a Cognitive Beast, You’re On the Verge of Becoming a Master, etc.).
-Score results will be an algorithm that incorporates speed and accuracy.
-Prompts: Blue, Red, Yellow (primary color word, written in another primary color. Ex. Yellow)
-Answers: Orange, Purple, Green (second colors: the combination of the two primary colors combined. Ex. Green)
-Questions are prompted one at a time.
-Timer and number correct update on screen
-Answers can be chosen from 3 keys (presumed: F, Space Key, J) that will have labels on the screen (colors labeled on keys will stay constant throughout the game)
-Personal best score will be stored locally.
+* Speed, accuracy, predetermined rankings (You’re a Cognitive Beast, You’re On the Verge of Becoming a Master, etc.).
+* Score results will be an algorithm that incorporates speed and accuracy.
+* Prompts: Blue, Red, Yellow (primary color word, written in another primary color. Ex. Yellow)
+* Answers: Orange, Purple, Green (second colors: the combination of the two primary colors combined. Ex. Green)
+* Questions are prompted one at a time.
+* Timer and number correct update on screen
+* Answers can be chosen from 3 keys (presumed: F, Space Key, J) that will have labels on the screen (colors labeled on keys will stay constant throughout the game)
+* Personal best score will be stored locally.
 
 
 
