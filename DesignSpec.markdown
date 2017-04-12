@@ -42,7 +42,8 @@ Two primary pages - Instructions/example and then the actual game. Leaderboards 
 
 ## Wireframes
 
-![alt text](hyperStroop/1.jpg "1")
+![alt text](https://github.com/hyperStroop/hyperStroop/blob/master/1.jpg "1")
+![alt text](https://github.com/hyperStroop/hyperStroop/blob/master/2.jpg "2")
 
 
 
