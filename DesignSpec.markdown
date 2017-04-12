@@ -4,7 +4,7 @@ Casey Lee
 Gianni Mancinelli
 John Yun
 
-Homework 2: Design specification
+# Homework 2: Design specification
 
 For this assignment, you don't need to write any code. Instead, you'll be writing a design specification that details the visual and interaction design for your solution (as you've likely done in INFO 360). You should include enough detail that you'll be able to use this as a reference in later deriving requirements.
 Your specification should have the following sections:
