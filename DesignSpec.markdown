@@ -30,6 +30,8 @@ Two primary pages - Instructions/example and then the actual game. Leaderboards 
 
 ### Measurements: 
 * Speed, accuracy, predetermined rankings (You’re a Cognitive Beast, You’re On the Verge of Becoming a Master, etc.).
+
+### Details:
 * Score results will be an algorithm that incorporates speed and accuracy.
 * Prompts: Blue, Red, Yellow (primary color word, written in another primary color. Ex. Yellow)
 * Answers: Orange, Purple, Green (second colors: the combination of the two primary colors combined. Ex. Green)
