@@ -42,12 +42,12 @@ Two primary pages - Instructions/example and then the actual game. Leaderboards 
 
 ## Wireframes
 
-![alt text](https://github.com/hyperStroop/hyperStroop/Wireframes/blob/master/1.jpg "1")
-![alt text](https://github.com/hyperStroop/hyperStroop/Wireframes/blob/master/2.jpg "2")
-![alt text](https://github.com/hyperStroop/hyperStroop/Wireframes/blob/master/3.jpg "3")
-![alt text](https://github.com/hyperStroop/hyperStroop/Wireframes/blob/master/4.jpg "4")
-![alt text](https://github.com/hyperStroop/hyperStroop/Wireframes/blob/master/5.jpg "5")
-![alt text](https://github.com/hyperStroop/hyperStroop/Wireframes/blob/master/6.jpg "6")
+![alt text](https://github.com/hyperStroop/hyperStroop/blob/master/1.jpg "1")
+![alt text](https://github.com/hyperStroop/hyperStroop/blob/master/2.jpg "2")
+![alt text](https://github.com/hyperStroop/hyperStroop/blob/master/3.jpg "3")
+![alt text](https://github.com/hyperStroop/hyperStroop/blob/master/4.jpg "4")
+![alt text](https://github.com/hyperStroop/hyperStroop/blob/master/5.jpg "5")
+![alt text](https://github.com/hyperStroop/hyperStroop/blob/master/6.jpg "6")
 
 
 
