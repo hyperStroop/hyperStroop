@@ -16,12 +16,12 @@ In today’s world, people have been increasingly interacting with technology in
 A game that presents a primary color written in a text color of a different primary color. The user has to select the color of the combination of the letter word and the color of the word if they were added together. The user used 3 keys on the keyboard to select their answer, to facilitate quick responses. The goal of the game is to get as many color combinations correct, in the shortest amount of time. Only one color will be presented on the screen at a time, though there will be 20 rounds (20 colors presented in total by the end of a game).
 
 ### Possible color options:
-Blue
-Green
-Red
-Purple
-Yellow
-Orange
+* Blue
+* Green
+* Red
+* Purple
+* Yellow
+* Orange
 
 ### Example: 
 When shown the word "blue" written in yellow text, the correct response by the player would be "green", since the combination of blue and yellow makes green.
