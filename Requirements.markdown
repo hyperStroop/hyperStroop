@@ -1,6 +1,8 @@
 # Requirements
 ## Two Pages:
-### Landing page: Instructions/example, Start Button
+### Landing page: 
+* Instructions/example
+* Start Button
 ### Game page: 
 #### Game window
 * Appropriate CSS to resize for different screen sizes.
