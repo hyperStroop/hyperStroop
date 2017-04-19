@@ -68,7 +68,8 @@
 		Total score += 0 
 	 } Else {
 		Total score -= .5
-} ```
+} 
+```
 
 ## Recording and summary screen requirements:
 1. Present the user with a rank using a predetermined scale.
