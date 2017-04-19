@@ -28,7 +28,7 @@
 5. Store boolean so that tutorial is automatically shown only once per machine
     * Button to re-instance the tutorial will be available
 6. Create a 'start' button to notify the game when the user is ready, then show a countdown on the screen before the game begins
-    * If user decides to hide the tutorial, the 'start' button will be enlarged
+    * If the user decides to hide the tutorial, the 'start' button will be enlarged
 7. Choose game color palette, fonts, etc.
 8. Keyboard mapped for game input
     * Show the mapped keys below the actual game screen for constant use
