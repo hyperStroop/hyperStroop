@@ -8,7 +8,7 @@
 ### Game page: 
 #### Game window
 * Appropriate CSS to resize for different screen sizes
-* Not available on mobile devices
+* Not supported on mobile devices
 #### Timer
 * Active timer set on game start
 * Timer cannot be paused
