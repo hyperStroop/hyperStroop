@@ -61,18 +61,18 @@
 * Correct answer = +1*((4 seconds - time taken if time taken is less than 4 seconds)/4)
 * Incorrect answer = - .5 from total score
 * Pseudocode:
-If (response is accurate) {
+``` If (response is accurate) {
 	If (response took less than 4 seconds) {
 		Total score += (4 - response time)/4
 	} Else {
 		Total score += 0 
 	 } Else {
 		Total score -= .5
-}
+} ```
 
 ## Recording and summary screen requirements:
-Present the user with a rank using a predetermined scale.
-Present the user a list of their answers compared to the correct answers.
-Show percentage of most frequently missed color combinations.
-Store top 5 scores using local storage.
+1. Present the user with a rank using a predetermined scale.
+2. Present the user a list of their answers compared to the correct answers.
+3. Show percentage of most frequently missed color combinations.
+4. Store top 5 scores using local storage.
 
