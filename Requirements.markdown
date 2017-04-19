@@ -15,7 +15,7 @@
 * Labels with corresponding answers
 ## Page 1: Landing page/Tutorial requirements
 1. Design overall layout of landing page
-* HTML, CSS, Node.js, JavaScript, Model-View-Controller
+    * HTML, CSS, Node.js, JavaScript, Model-View-Controller
 2. Write introduction & tutorial to fit on one page
 3. hyperStroop logo at the top
 4. Allow the user to skip/continue through the tutorial page
