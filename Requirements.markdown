@@ -3,6 +3,7 @@
 ### Landing page: 
 * Instructions/example
 * Start Button
+* Predetermined keys for answers are labeled and shown
 ### Game page: 
 #### Game window
 * Appropriate CSS to resize for different screen sizes.
@@ -12,6 +13,7 @@
 * Timer cannot be paused
 * Game can be restarted
 #### Key
+* Key is still shown in the same location
 * Actions properly mapped to the keyboard.
 * F, J, Space Bar
 * Labels with corresponding answers
