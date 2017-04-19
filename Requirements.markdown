@@ -2,20 +2,20 @@
 ## Two Pages:
 ### Landing page: 
 * Instructions/example
-* Start Button
+* 'Start' button is on the screen
 * Predetermined keys for answers are labeled and shown
 ### Game page: 
 #### Game window
-* Appropriate CSS to resize for different screen sizes.
-* Not available on mobile device.
+* Appropriate CSS to resize for different screen sizes
+* Not available on mobile devices
 #### Timer
-* Active timer set on game start.
+* Active timer set on game start
 * Timer cannot be paused
 * Game can be restarted
 #### Key
 * Key is still shown in the same location
-* Actions properly mapped to the keyboard.
-* F, J, Space Bar
+* Actions properly mapped to the keyboard
+    * F, J, Space Bar
 * Labels with corresponding answers
 ## Page 1: Landing page/Tutorial requirements
 1. Design overall layout of landing page
@@ -25,9 +25,9 @@
 4. Allow the user to skip/continue through the tutorial page
 5. Store boolean so that tutorial is automatically shown only once per machine
     * Button to re-instance the tutorial will be available
-6. Create a start button to notify the game when the user is ready, then show a countdown on the screen before the game begins
+6. Create a 'start' button to notify the game when the user is ready, then show a countdown on the screen before the game begins
 7. Choose game color palette, fonts, etc.
-8. Keyboard mapped for game input.
+8. Keyboard mapped for game input
     * Show the mapped keys below the actual game screen for constant use
     * Keys: F, J, Space Bar
     * Keys will have predetermined colors mapped with it. Will be shown on the screen for constant referencing.
@@ -44,16 +44,16 @@
 7. Questions are prompted one at a time
 8. Questions load within 1 second of completion
 9. Answer questions with predetermined keys that are shown right beneath the screen
-10. Let user know when their answer is correct or incorrect
-    * Visual and/or audio cues.
+10. Let the user know when their answer is correct or incorrect
+    * Visual and/or audio cues
     * Ratio of correct/incorrect shown on the screen
-11. Ability to restart during and after the game
+11. Ability to restart the game during and after the game
 12. Summary of the game will be shown in the same location as the gameplay screen.
     * Will disappear once game is restarted or exited
 ## Scorekeeping requirements: 
 1. Test user input against correct input 
     * Store all questions that were prompted for end-game summary review
-    * Correct questions will show a green checkmark next to it, red if incorrect
+    * Correct questions will show a green checkmark next to it, and a red 'X' if incorrect
 2. Store user accuracy
     * Ratio & percentage
 3. Time recorded for each question and total time
@@ -78,8 +78,8 @@ If (response is accurate) {
 
 ## Recording and summary screen requirements:
 1. Summary screen replaces the gameplay screen (still on the same page)
-2. Present the user with a rank using a predetermined scale.
-3. Present the user a list of their answers compared to the correct answers.
-4. Show percentage of most frequently missed color combinations.
-5. Store top 5 scores using local storage.
+2. Present the user with a rank using a predetermined scale
+3. Present the user a list of their answers compared to the correct answers
+4. Show percentage of most frequently missed color combinations
+5. Store top 5 scores using local storage
 
