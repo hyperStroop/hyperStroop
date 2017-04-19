@@ -14,20 +14,20 @@
 * F, J, Space Bar
 * Labels with corresponding answers
 ## Page 1: Landing page/Tutorial requirements
-Design overall layout of landing page
-HTML, CSS, Node.js, JavaScript, Model-View-Controller
-Write introduction & tutorial to fit on one page
-hyperStroop logo at the top
-Allow the user to skip/continue through the tutorial page
-Store boolean so that tutorial is automatically shown only once per machine
-Button to re-instance the tutorial will be available
-Create a start button to notify the game when the user is ready, then show a countdown on the screen before the game begins
-Choose game color palette, fonts, etc.
-Keyboard mapped for game input.
-Show the mapped keys below the actual game screen for constant use
-Keys: F, J, Space Bar
-Keys will have predetermined colors mapped with it. Will be shown on the screen for constant referencing.
-Page 2: Gameplay requirements
+1. Design overall layout of landing page
+* HTML, CSS, Node.js, JavaScript, Model-View-Controller
+2. Write introduction & tutorial to fit on one page
+3. hyperStroop logo at the top
+4. Allow the user to skip/continue through the tutorial page
+5. Store boolean so that tutorial is automatically shown only once per machine
+* Button to re-instance the tutorial will be available
+6. Create a start button to notify the game when the user is ready, then show a countdown on the screen before the game begins
+7. Choose game color palette, fonts, etc.
+8. Keyboard mapped for game input.
+* Show the mapped keys below the actual game screen for constant use
+* Keys: F, J, Space Bar
+* Keys will have predetermined colors mapped with it. Will be shown on the screen for constant referencing.
+## Page 2: Gameplay requirements
 Mapped keys will still be shown in the same location
 ‘Back to Tutorial’ button will be available
 Countdown on game start is accurate (3, 2, 1, Go!)
