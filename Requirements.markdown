@@ -1,19 +1,19 @@
-Requirements
-Two Pages:
-Landing page: Instructions/example, Start Button
-Game page: 
-Game window
-Appropriate CSS to resize for different screen sizes.
-Not available on mobile device.
-Timer
-Active timer set on game start.
-Timer cannot be paused
-Game can be restarted
-Key
-Actions properly mapped to the keyboard.
-F, J, Space Bar
-Labels with corresponding answers
-Page 1: Landing page/Tutorial requirements
+# Requirements
+## Two Pages:
+ 1. Landing page: Instructions/example, Start Button
+ 2. Game page: 
+i. Game window
+* Appropriate CSS to resize for different screen sizes.
+* Not available on mobile device.
+ii. Timer
+* Active timer set on game start.
+* Timer cannot be paused
+* Game can be restarted
+iii. Key
+* Actions properly mapped to the keyboard.
+* F, J, Space Bar
+* Labels with corresponding answers
+## Page 1: Landing page/Tutorial requirements
 Design overall layout of landing page
 HTML, CSS, Node.js, JavaScript, Model-View-Controller
 Write introduction & tutorial to fit on one page
