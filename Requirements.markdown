@@ -61,12 +61,13 @@
 * Correct answer = +1*((4 seconds - time taken if time taken is less than 4 seconds)/4)
 * Incorrect answer = - .5 from total score
 * Pseudocode:
-``` If (response is accurate) {
+``` 
+If (response is accurate) {
 	If (response took less than 4 seconds) {
 		Total score += (4 - response time)/4
 	} Else {
 		Total score += 0 
-	 } Else {
+} Else {
 		Total score -= .5
 } 
 ```
