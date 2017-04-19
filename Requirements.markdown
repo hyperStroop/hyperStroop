@@ -3,6 +3,7 @@
 ### Landing page: 
 * Instructions/example
 * 'Start' button is on the screen
+    * Will start if clicked by a mouse or if the user presses any 'enter' key on their keyboard
 * Predetermined keys for answers are labeled and shown
 ### Game page: 
 #### Game window
