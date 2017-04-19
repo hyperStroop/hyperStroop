@@ -77,8 +77,9 @@ If (response is accurate) {
 ```
 
 ## Recording and summary screen requirements:
-1. Present the user with a rank using a predetermined scale.
-2. Present the user a list of their answers compared to the correct answers.
-3. Show percentage of most frequently missed color combinations.
-4. Store top 5 scores using local storage.
+1. Summary screen replaces the gameplay screen (still on the same page)
+2. Present the user with a rank using a predetermined scale.
+3. Present the user a list of their answers compared to the correct answers.
+4. Show percentage of most frequently missed color combinations.
+5. Store top 5 scores using local storage.
 
