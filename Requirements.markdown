@@ -2,14 +2,14 @@
 ## Two Pages:
  1. Landing page: Instructions/example, Start Button
  2. Game page: 
-i. Game window
+### Game window
 * Appropriate CSS to resize for different screen sizes.
 * Not available on mobile device.
-ii. Timer
+### Timer
 * Active timer set on game start.
 * Timer cannot be paused
 * Game can be restarted
-iii. Key
+### Key
 * Actions properly mapped to the keyboard.
 * F, J, Space Bar
 * Labels with corresponding answers
