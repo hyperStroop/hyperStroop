@@ -23,6 +23,7 @@
     * HTML, CSS, Node.js, JavaScript, Model-View-Controller
 2. Write introduction & tutorial to fit on one page
 3. hyperStroop logo at the top
+    * Clicking the logo will take the user to the tutorial page or refresh the page if currently on it
 4. Allow the user to skip/continue through the tutorial page
 5. Store boolean so that tutorial is automatically shown only once per machine
     * Button to re-instance the tutorial will be available
