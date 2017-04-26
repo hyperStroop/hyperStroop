@@ -54,20 +54,21 @@ A shared component that intializes all of the sub-components. (each described in
 
 Owner: Gianni
 
-The user view is the part of the screen that displays the data specific to the user’s current game, i.e. time, current score, etc. 
+The user view is the part of the screen that displays the data specific to the user’s current game, i.e. time, current score, progress, and restart button.
 References to the following elements are needed so that they can be communicated to the user controller when necessary:
 * Current game time that begins at zero and updates every second.
-* Progress in game (15/20 completed, etc)
+* Number of correct answers thus far
+* Progress in game (15/20 completed)
 * New game/restart button.
 
-To follow the MVC chosen architecture, the user view will interact with the game storage model via the game controller to retreive and present data.
+To follow the MVC chosen architecture, the User View will interact with the Game Storage Model via the game controller to retreive and present data.
 It does this by having functions that delegate the operations to the controller instead of directly manipulating the model.
 
 ### Game View
 
 Owner: Gianni
 
-The game view displays the questions in real time. The game view is controlled by the game controller, 
+The Game View displays the questions in real time. The game view is controlled by the game controller, 
 which updates the view whenever new information is pulled from the model (i.e. when an answer is incorrect vs correct).
 * The Game View will need to retrieve the 20 questions, one by one, from the Game Storage Model (via the controller) to display on the screen.
 * Will display a new question once an answer is given by the first mapped key pressed (incremented each time a response is received and checked for accuracy)
@@ -84,7 +85,7 @@ The user will recieve a prompt for Oauth and will enter their name for the leade
 token (int) is assigned to the user and a name will be determined by the user. Leaderboard data will be 
 stored in JSON format.    
 * Will need to retrieve all the relevant game data to sum up the user’s results from the Game Storage Model (Total time, ratio of correct from total, new calculated store, and notification if user scored in the top 10)
-* Will need to interact with the User Controller/Game View to swap views within the game screen.
+* Will need to interact with the Game Controller/Game View to swap views within the game screen.
 
 
 ### Tutorial View
@@ -112,7 +113,8 @@ Also specifies which direction the information is going (to the model or view):
 
 Owner: Jessica
 
-The game controller will handle the interactions for the current game. 
+The Game Controller will handle the interactions for the current game. 
 Specifically, the keyboard inputs from the user, matching them to the correct answer:
 * Keyboard inputs on ‘keydown’ → entered key add to the model
 * After a key is pressed, it will change notify the Game View to show the new question via the Game Storage Model.
+* Will also notify the Game View to change questions when a corresponding key is pressed.
