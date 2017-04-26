@@ -77,7 +77,21 @@ which updates the view whenever new information is pulled from the model (i.e. w
 Owner: Casey
 
 Displays the metrics that were gathered in the ‘Game Storage Model’ to the user once the game is completed. 
-This includes adding a username id when a user gets a high enough score to make it on the leaderboard.
+This includes adding a username id when a user gets a high enough score to make it on the leaderboard. 
+User will recieve prompt for Oauth and will enter their name for the leaderboard. Upon authorization a unique 
+token (int) is assigned to the user and a name will be determined by the user. Leaderboard data will be 
+stored in JSON format. 
+
+leaderboard --------------- user_key: int, assigned at Oauth
+     |                          |
+     |                          ------- name: string
+     |                          |
+     |                          ------- score: int 
+     |
+  users     --------------- user_key
+                               | 
+                               -------- name: string 
+   
 * Will need to retrieve all the relevant game data to sum up the user’s results (Total time, ratio of correct from total, new calculated store)
 * Will need to interact with the User Controller/Game View to swap views within the game screen.
 
