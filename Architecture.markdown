@@ -10,13 +10,13 @@ The model is where we’ll store the information for the game.
 
 In the model, we’ll have local storage for:
 * The user's end game time (time)
-* The user's current score (number)
+* The user's current score, i.e. number of correct answers thus far (number)
 * True/false for previous question (boolean)
 * True/false for first game played (boolean)
-* 20 color combinations for the current round (ordered list)
+* 20 random color combinations for the current round (ordered list)
 * Valid keys entered by user (ordered list)
-* Best score (number)
-* Top 10 scores compared from all users (ordered list)
+* User's best score so far (number)
+* Top 10 scores compared from all users who have played the game (ordered list)
 
 This model also has functions that relate directly to the game being played and game management, including:
 * Getter and setter methods for most data fields.
