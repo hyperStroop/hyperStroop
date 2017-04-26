@@ -70,8 +70,8 @@ Owner: Gianni
 The game view displays the questions in real time. The game view is controlled by the game controller, 
 which updates the view whenever new information is pulled from the model (i.e. when an answer is incorrect vs correct).
 * The Game View will need to retrieve the 20 questions, one by one, from the Game Storage Model (via the controller) to display on the screen.
-* Will display a new question once an answer is given by the first mapped key pressed
-* If the game is completed, the Game View will be replaced with the Results View
+* Will display a new question once an answer is given by the first mapped key pressed (incremented each time a response is received and checked for accuracy)
+* If the game is completed, the game will be complete and the Game View will be replaced with the Results View
 
 
 ### Results View
