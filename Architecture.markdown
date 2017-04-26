@@ -37,10 +37,10 @@ In order to do this, the model will be a subject.
 
 Owner: John
 
-A starting point for the game with html components:
+A starting point for the game with HTML components:
 * Logo
-* Footer with link to github.
-* Static helper image of keyboard mapping secondary colors to keys.
+* Footer with link to GitHub.
+* Static helper image of keyboard mappings of secondary colors to keys.
   * F-> green, J-> orange, spacebar-> purple.
 
 ### Program Index
@@ -53,7 +53,7 @@ A shared component that intializes all of the sub-components. (each described in
 
 Owner: Gianni
 
-The user view is the part of the screen that displays the data specific to the user’s current game, i.e. time left, current score, etc. 
+The user view is the part of the screen that displays the data specific to the user’s current game, i.e. time, current score, etc. 
 References to the following elements are needed so that they can be communicated to the user controller when necessary:
 * Current game time that begins at zero and updates every second.
 * Player's calculated score.
@@ -77,11 +77,11 @@ which updates the view whenever new information is pulled from the model (i.e. w
 Owner: Casey
 
 Displays the metrics that were gathered in the ‘Game Storage Model’ to the user once the game is completed. 
-This includes adding a username id when a user gets a high enough score to make it on the leaderboard. 
-User will recieve prompt for Oauth and will enter their name for the leaderboard. Upon authorization a unique 
+This includes adding a username id when a user gets a high enough score to make it on the top 10 leaderboard. 
+The user will recieve a prompt for Oauth and will enter their name for the leaderboard. Upon authorization, a unique 
 token (int) is assigned to the user and a name will be determined by the user. Leaderboard data will be 
 stored in JSON format.    
-* Will need to retrieve all the relevant game data to sum up the user’s results (Total time, ratio of correct from total, new calculated store)
+* Will need to retrieve all the relevant game data to sum up the user’s results (Total time, ratio of correct from total, new calculated store, and notification if user scored in the top 10)
 * Will need to interact with the User Controller/Game View to swap views within the game screen.
 
 
