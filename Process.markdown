@@ -8,7 +8,7 @@
 * Regularly updated wireframes on our team’s Google Drive to secure design consistency between views.
     * Provides a visual check in for desired outcomes.
     * Changes to documents can be automatically sent to the entire team as we all modified out notification settings.
-* If we have questions for Andy and Benji, we will use Slack, but most of us do not check Slack regularly so we can get quicker answers via Facebook Messenger for our group. Slack will suffice for off-campus questions with Andy and Benji. 
+* If we have questions for Andy and Benji, we will use Slack, but most of us do not check Slack regularly so we can get quicker answers via Facebook Messenger for our group. Slack will suffice for off-campus questions with Andy and Benji. However, Slack will be used for other purposes mentioned below.
 
 ### Coordination and Planning
 * Weekly meetings on Thursdays at 1:30pm in the Research Commons + Google Hangout for John (off-campus) to discuss:
@@ -59,8 +59,8 @@
         * Will input our issues into one of these columns.
         * GitHub will notify all team members when issues are completed
         * GitHub will also notify all team members when issues are dragged into a different column
-* GitHub pushes commits on specific branches on specific channels on Slack for Andy's and Benji's reference, and as a secondary reference for our team.
-    * Team members will be assigned to appropriate channels to streamline the notifications to not clog up the team Facebook Messenger discussion if not pertaining to the whole team.
+* GitHub will push commits on specific branches in specific channels on Slack for Andy's and Benji's reference, and as a secondary reference for our team.
+    * Team members will be assigned to appropriate channels to streamline the notifications to not clog up the team Facebook Messenger discussion if not pertaining to the whole team. The members within their appropriate channels will be able to post relevant information and files, along with being able to see GitHub commits for the corresponding branch.
 * GitHub commits need to be commented and documented.
     * Note what was done and/or what is still left to do in the GitHub comments so you know where you left off and team members are aware of your progress.
     * If closing an issue, describe what changes you made for the issue for everyone's reference.
