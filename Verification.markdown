@@ -7,7 +7,7 @@ Verify if javascript is enabled on browser
 #### Verification Solution:
 
 Manual: use < noscript > element to determine if scripts are allowed on user’s browser. Run tests on browsers with javascript enabled and disabled. If the script is blocked and a < noscript > element does not produce text (e.g Please enable javascript) the test will fail. 
-
+======
 
 #### Requirement:
 
