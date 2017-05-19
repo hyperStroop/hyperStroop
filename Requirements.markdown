@@ -19,11 +19,11 @@
 4. Mapped keys are shown, mentioned above
 ### Page 2: Game page
 #### Game window
-* Playable on the different screen sizes listed below
+1. Playable on the different screen sizes listed below
     * 1920x1080, 1600x900, 1440x900, 1366x768, 1280x1024, 1280x800, 1280x720
-* Active timer that starts at 0.0s when the game starts after the 3 second countdown mentioned above and shows the first question
-* Timer cannot be paused while playing the game
-* Game can be restarted to reset the timer and score
+2. Active timer that starts at 0.0s when the game starts after the 3 second countdown mentioned above and shows the first question
+3. Timer cannot be paused while playing the game
+4. Game can be restarted to reset the timer and score
 #### Gameplay requirements
 1. Mapped keys will be shown
 2. ‘Back to Tutorial’ button will be available to take the user to the tutorial page
