@@ -40,7 +40,7 @@
     * Ratio of correct/total will shown on the screen up to the current question
 7. Summary of the game will be shown in the same place as the gameplay screen (will replace it)
     * Will disappear once game is restarted or exited
-#### Summary Screen
+#### Summary View
 1. Summary screen replaces the gameplay screen (still on the same page)
 2. Present the user a list of their the questions that were presented and if they user got it correct
 3. Show the ratio of correct/total and converted percentage
