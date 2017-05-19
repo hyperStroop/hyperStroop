@@ -17,7 +17,7 @@
     * A 3 second countdown (3, 2, 1, Go!) will begin within 1 second after pressing the 'Start' button
     * If the user decides to hide the tutorial, the 'start' button will be enlarged
 4. Mapped keys are shown, mentioned above
-### Game page: 
+### Page 2: Game page
 #### Game window
 * Playable on the different screen sizes listed below
     * 1920x1080, 1600x900, 1440x900, 1366x768, 1280x1024, 1280x800, 1280x720
