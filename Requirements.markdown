@@ -15,7 +15,6 @@
 3. Create a 'start' button to notify the game when the user is ready, then show a countdown on the screen before the game begins
     * Will trigger if clicked by a mouse
     * A 3 second countdown (3, 2, 1, Go!) will begin within 1 second after pressing the 'Start' button
-    * If the user decides to hide the tutorial, the 'start' button will be enlarged
 4. Mapped keys are shown, mentioned above
 ### Page 2: Game page
 #### Game window
