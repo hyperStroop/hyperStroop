@@ -28,6 +28,7 @@
 1. Mapped keys will be shown
 2. ‘Back to Tutorial’ button will be available to take the user to the tutorial page
 3. Ability to restart the game during and after the game
+    * a 'restart' button will be available on the right side of the game screen
 4. Gameplay screen prompts only one of the given color combinations at a time
     * Questions load within 1 second of pressing a mapped key
     * All color combinations and answers will be stored locally for runtime performance.
