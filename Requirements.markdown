@@ -40,22 +40,21 @@
     * Ratio of correct/total will shown on the screen up to the current question
 7. Summary of the game will be shown in the same place as the gameplay screen (will replace it)
     * Will disappear once game is restarted or exited
-#### Scorekeeping requirements: 
-1. Test user input against correct input 
-    * Store all questions that were prompted for end-game summary review
-2. Store user accuracy
-    * Ratio of correct/total & converted percentage
-3. Time recorded for each question and total time of the full game
-4. Leaderboard of top 5 global scores
-    * Firebase
 #### Summary Screen
 1. Summary screen replaces the gameplay screen (still on the same page)
-2. Present the user with a rank using a predetermined scale
-3. Present the user a list of their answers compared to the correct answers
-4. Show the ratio of correct/total and converted percentage
-5. Show the top 5 global scores
+2. Present the user a list of their the questions that were presented and if they user got it correct
+3. Show the ratio of correct/total and converted percentage
+4. Show the top 5 global scores
     * If the user's score is better than any of the top 5, a textbox will be available for the user to upload their score
-5. Algorithm that incorporates both speed and accuracy
+#### Scorekeeping requirements: 
+1. Store all questions that were prompted
+2. Store all valid keys that were pressed with the corresponding questions
+3. Store user accuracy
+    * Ratio of correct/total & converted percentage
+4. Time recorded for each question and total time of the full game
+5. Leaderboard of top 5 global scores
+    * Firebase
+6. Develop an algorithm that incorporates both speed and accuracy for the summary review screen
     * Accuracy = correct/total
     * Speed = time
     * Correct answer = +1*((4 seconds - time taken if time taken is less than 4 seconds)/4)
