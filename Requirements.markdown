@@ -45,7 +45,7 @@
 3. Show the ratio of correct/total and converted percentage
 4. Show the top 5 global scores
     * If the user's score is better than any of the top 5, a textbox will be available for the user to upload their score
-#### Scorekeeping requirements: 
+### Scorekeeping requirements: 
 1. Store all questions that were prompted
 2. Store all valid keys that were pressed with the corresponding questions
 3. Store user accuracy
