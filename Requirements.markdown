@@ -1,36 +1,35 @@
 # Requirements
 ## Two Pages:
 ### Landing page: 
-* Instructions/example
+* Instructions & example of how to play the game
 * 'Start' button is on the screen
-    * Will start if clicked by a mouse or if the user presses any 'enter' key on their keyboard
+    * Will start if clicked by a mouse
 * Predetermined keys for answers are labeled and shown
 ### Game page: 
 #### Game window
-* Appropriate CSS to resize for different screen sizes
-* Not supported on mobile devices
+* Playable on the different screen sizes listed below
+    * 1920x1080, 1600x900, 1440x900, 1366x768, 1280x1024, 1280x800, 1280x720, 
 #### Timer
-* Active timer set on game start
+* A 3 second countdown (3, 2, 1, Go!) will begin within 1 second after pressing the 'Start' button
+* Active timer that starts at 0.0s when the game starts
 * Timer cannot be paused
-* Game can be restarted
+* Game can be restarted to reset the timer and scores
 #### Key
-* Key is still shown in the same location
+* Mapped keys are still shown in the same general location on both pages (under the tutorial and under the game view)
 * Actions properly mapped to the keyboard
     * F, J, Space Bar
-* Labels with corresponding answers
+    * Labels with corresponding answers
 ## Page 1: Landing page/Tutorial requirements
-1. Design overall layout of landing page
-    * HTML, CSS, Node.js, JavaScript, Model-View-Controller
-2. Write introduction & tutorial to fit on one page
-3. hyperStroop logo at the top
+1. Write introduction & tutorial to fit on one page
+2. hyperStroop logo at the top
     * Clicking the logo will take the user to the tutorial page or refresh the page if currently on it
-4. Allow the user to skip/hide the written tutorial
-5. Store boolean so that tutorial is automatically shown only once per machine
+3. Allow the user to skip/hide the written tutorial
+4. Store boolean so that tutorial is automatically shown only once per machine
     * Button to re-instance the tutorial will be available
-6. Create a 'start' button to notify the game when the user is ready, then show a countdown on the screen before the game begins
+5. Create a 'start' button to notify the game when the user is ready, then show a countdown on the screen before the game begins
     * If the user decides to hide the tutorial, the 'start' button will be enlarged
-7. Choose game color palette, fonts, etc.
-8. Keyboard mapped for game input
+6. Choose game color palette, fonts, etc.
+7. Keyboard mapped for game input
     * Show the mapped keys below the actual game screen for constant use
     * Keys: F, J, Space Bar
     * Keys will have predetermined colors mapped with it. Will be shown on the screen for constant referencing.
