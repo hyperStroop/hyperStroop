@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,300);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+body {
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: #FFFFFF;
+}
+
+h1, h2, h3 {
+    font-family: Raleway, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+nav {
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181C22;
+    z-index: 9999;
+    padding-top: 1em;
+}
+
+nav ul {
+    margin-left: 15px;
+    padding-left: 0;
+}
+
+nav a {
+    color: #FFF;
+    font-size: 16px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;
+
+}
+
+nav a:hover, a:focus {
+    text-decoration: none;
+    color: #98ff98;
+}
+
+#header {
+    padding-top: 6em;
+    text-align: center;
+}
+
+#startButton {
+    text-align: center;
+}
+
+/***********************
+  OUTLINE BUTTONS
+************************/
+.btn-lg {
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+.btn-success.outline {
+    border: 2px solid #b2ffb2;
+    color: #b2ffb2;
+}
+.btn-success.outline:hover, .btn-success.outline:focus, .btn-success.outline:active, .btn-success.outline.active, .open > .dropdown-toggle.btn-success {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.btn-success.outline:active, .btn-success.outline.active {
+    border-color: #98ff98;
+    color: #98ff98;
+    box-shadow: none;
+}
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
