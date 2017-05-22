@@ -90,3 +90,33 @@ nav a:hover, a:focus {
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
 }
+
+
+/***********************
+  GAME AND USER VIEW
+************************/
+
+#gametext {
+    font-size: 60px;
+}
+
+#ingameinfo {
+    font-size: 30px;
+    color: black;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;
+}
+
+#keys1 {
+    font-size: 30px;
+    color: black;
+}
+
+#keys2 {
+    font-size: 30px;
+    color: black;
+    padding-left: 2.6em;
+}
+
