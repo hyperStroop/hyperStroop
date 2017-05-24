@@ -31,6 +31,10 @@ export class Model implements Subject {
     return this.roundQuestions;    
   }
 
+  getCurrentQuestion():Question {
+    return this.roundQuestions.pop();
+  }
+  
   //@param number is the keyboard code for the key that the user entered
   setSelected(selectedKey:number) {
     //key codes:         
@@ -39,6 +43,18 @@ export class Model implements Subject {
         //right arrow: 39
         //down arrow: 40
     //still needs to check to see whether that keycode matches with the correct answer
+  }
+
+  checkQuestion(answer:string):boolean {
+    if(answer == this.getCurrentQuestion().getAnswer()){
+      this.lastAnswer = true;
+      this.currentScore += 1;
+      return true;
+    }
+    else {
+      this.lastAnswer = false;
+      return false;
+    }
   }
 
   unselect() {
@@ -101,19 +117,22 @@ export interface Observer {
 }
 
 export class Question {
-    constructor(private textColor:string, private backColor:string) {}
+    constructor(private word:string, private color:string, private answer:string) {}
 
-    getTextColor():string{
-        return this.textColor;
+    getWord():string{
+        return this.word;
     }
 
-    getBackColor():string{
-        return this.backColor;
+    getColor():string{
+        return this.color;
+    }
+
+    getAnswer():string{
+        return this.answer;
     }
 }
 
 export class QuestionFactory {
-
     createQuestion():Question {
         let firstRand:number = Math.floor(Math.random() * 3) + 1;
         let secondRand:number = Math.floor(Math.random() * 3) + 1;
@@ -122,10 +141,13 @@ export class QuestionFactory {
             let secondRand = Math.floor(Math.random() * 3) + 1;
         }
 
-        return new Question(this.getColorByNumber(firstRand), this.getColorByNumber(secondRand));
+        let color1 = this.getColorByNumber(firstRand);
+        let color2 = this.getColorByNumber(secondRand);
+
+        return new Question(color1, color2, this.getAnswerByColors(color1, color2));
     }
 
-      getColorByNumber(color:number):string{
+    getColorByNumber(color:number):string{
         if(color == 1){
             return "red";
         }
@@ -135,6 +157,21 @@ export class QuestionFactory {
         else if(color == 3){
             return "yellow";
         }
-        return null;
+        return "black";
+    }
+
+    getAnswerByColors(color1:string, color2:string):string{
+        if((color1 == "red" || color2 == "red") && (color1 == "blue" || color2 == "blue")){
+            return "purple"
+        }
+        else if((color1 == "red" || color2 == "red") && (color1 == "yellow" || color2 == "yellow")){
+            return "orange"
+        }
+        else if((color1 == "blue" || color2 == "blue") && (color1 == "yellow" || color2 == "yellow")){
+            return "green"
+        }
+        else {
+            return null;
+        }
     }
 }
