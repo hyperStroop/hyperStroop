@@ -11,35 +11,83 @@
 </head>
 
 <body>
-
     <nav>
          <ul>
-             <a href="./index.html">hyperStroop</a>
+             <a href="./index.html"><img src="img/icon.png" style="margin-top:-3px"></a>
+             <a href="./index.html">HyperStroop</a>
         </ul>
     </nav>
 
-    <section id="header">
+    <div id="top">
+        <section id="header">
+            <div class="container">
+                <div class="col-md-12">
+                    <h1 class="colorTransition">HYPERSTROOP</h1>
+                    <p>A game that tests your brain.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tutorial">
+            <div class="container">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <p>A series of colored-word combinations will be presented to you one at a time.</p>
+                    <p>Your task is to identify the <b>color</b> of the combination of both the word and the color of the text.</p>
+                    <p>Press the correct corresponding key on your keyboard, the keys are shown below.</p>
+                    <p>You will be scored on both speed and accuracy. For example:</p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </section>
+    </div>
+
+    <section id="example">
         <div class="container">
-            <div class="col-md-12">
-                <h1> Welcome to the hyperStroop challenge!</h1>
+            <div class="row">
+                <div class="col-md-4"><p>A question will be prompted</p></div>
+                <div class="col-md-4"><p>You press the corresponding key</p></div>
+                <div class="col-md-4"><p>The answer is <b>both</b> colors combined</p></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4"><img src="img/questions.png" alt="questions" height="300" width="325"></div>
+                <div class="col-md-4"><img src="img/keys.png" alt="keys" height="300" width="325"></div>
+                <div class="col-md-4"><img src="img/answers.png" alt="answers" height="300" width="325"></div>
             </div>
         </div>
     </section>
 
-    <section id="tutorial">
-        <div class="container">
-            <p></p>
-        </div>
-    </section>
-
-    <section id="example">
-        <div class="container">
-          <p></p>
-        </div>
-    </section>
-
     <section id="startButton">
-        <button type="button" class="btn btn-success btn-lg outline">Start</button>
+        <div class="container">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><button type="button" class="btn btn-success btn-block">Start</button></div>
+            <div class="col-md-4"></div>
+        </div>
     </section>
+
+    <section id="legend">
+        <div class="container">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><p>Key Bindings</p></div>
+            <div class="col-md-4"></div>
+        </div>
+    </section>
+
+    <section id="keyboard">
+        <div class="container">
+            <div class="col-md-11">
+                <img src="img/keyboard.png" alt="Keys" height="200" width="600">
+            </div>
+            <div class="col-md-1">
+                <img src="img/colorkey.png" alt="Keys" height="200" width="200" align="right">
+            </div>
+        </div>
+    </section>
+
+<footer>
+    Designed by HyperStroop
+</footer>
 </body>
 </html>
+
