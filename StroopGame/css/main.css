@@ -5,12 +5,13 @@
 body {
     font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 200;
     background-color: #FFFFFF;
 }
 
 h1, h2, h3 {
     font-family: Raleway, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 200;
 }
 
 nav {
@@ -44,13 +45,23 @@ nav a:hover, a:focus {
     color: #98ff98;
 }
 
-#header {
+#header, #tutorial, #startButton {
     padding-top: 6em;
     text-align: center;
 }
 
-#startButton {
+#example {
+    font-size: 3em;
     text-align: center;
+    padding-top: 7%;
+}
+
+#exQuestion {
+    color: blue;
+}
+
+#exAnswer {
+    color: green;
 }
 
 /***********************
