@@ -47,11 +47,15 @@ nav a:hover, a:focus {
     padding-top: 7em;
 }
 
-#header, #tutorial, #startButton, #keyboard, #example, #legend {
+#header, #tutorial, #startButton, #keyboard, #example, #legend, #hideTutorial {
     text-align: center;
     font-family: "Calibri Light", Raleway, sans-serif;
     color: white;
     font-size: 15px;
+}
+
+#hideTutorial {
+    color: black;
 }
 
 #example, #legend {
