@@ -1,4 +1,6 @@
-
+/***********************
+  Main
+************************/
 body {
     font-size: 16px;
     background-color: #FFFFFF;
@@ -9,8 +11,7 @@ nav {
     display: inline-block;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: #181C22;
+    width: 15em;
     z-index: 9999;
     padding-top: 1em;
 }
@@ -27,7 +28,6 @@ nav a {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-right: 0.5em;
-
 }
 
 nav a:hover, a:focus {
@@ -35,63 +35,85 @@ nav a:hover, a:focus {
     color: #98ff98;
 }
 
-#header, #tutorial, #startButton {
+#header {
     padding-top: 6em;
+}
+
+#tutorial {
+    padding-top: 4em;
+}
+
+#startButton {
+    padding-top: 7em;
+}
+
+#header, #tutorial, #startButton, #keyboard, #example, #legend {
     text-align: center;
+    font-family: "Calibri Light", Raleway, sans-serif;
+    color: white;
+    font-size: 15px;
 }
 
-#example {
-    font-size: 3em;
-    text-align: center;
-    padding-top: 7%;
+#example, #legend {
+    font-size: 1.5em;
+    padding-top: 3%;
+    color: black;
 }
 
-#exQuestion {
-    color: blue;
+#legend {
+    padding-bottom: 0.5em;
+    font-size: 2em;
+    margin: 0;
 }
 
-#exAnswer {
-    color: green;
+#top {
+    background-color: black;
+}
+
+#top, #keyboard, #startButton {
+    padding-bottom: 3em;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
 }
 
 /***********************
-  OUTLINE BUTTONS
+  Header Color Transition
 ************************/
-.btn-lg {
-    font-size: 18px;
-    line-height: 1.33;
-    border-radius: 6px;
+.colorTransition {
+    font-size: 70px;
+    font-family: 'Raleway', "Yu Gothic UI Semilight", Arial, sans-serif;
+    font-variant: all-small-caps;
+    -webkit-animation:colorchange 6s infinite alternate;
 }
 
-.btn.outline {
-    background: none;
-    padding: 12px 22px;
+@-webkit-keyframes colorchange {
+    0% {
+        color: white;
+    }
+    33% {
+        color: lightgray;
+    }
+    66% {
+        color: gray;
+    }
 }
-.btn-success.outline {
-    border: 2px solid #b2ffb2;
-    color: #b2ffb2;
-}
-.btn-success.outline:hover, .btn-success.outline:focus, .btn-success.outline:active, .btn-success.outline.active, .open > .dropdown-toggle.btn-success {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-.btn-success.outline:active, .btn-success.outline.active {
-    border-color: #98ff98;
-    color: #98ff98;
-    box-shadow: none;
-}
+
+/***********************
+  BUTTONS
+************************/
 
 .btn {
-    padding: 14px 24px;
+    font-size: 20px ! important;
+    padding: 14px 24px ! important;
     border: 0 none;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
-}
-
 
 /***********************
   GAME AND USER VIEW
