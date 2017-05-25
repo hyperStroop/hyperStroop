@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="controller.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hyperStroop</title>
+    <link rel="icon" href="img/page-icon.png">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav>
+         <ul>
+             <a href="./index.html"><img src="img/icon.png" style="margin-top:-3px"></a>
+             <a href="./index.html">HyperStroop</a>
+        </ul>
+    </nav>
+
+    <div id="wrapper">
+    <section id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1> </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gameplay">
+        <div class="container">
+            <div class="col-sm-12">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4">
+                    <h1 id="gametext" class="text-center">
+                            blue
+                    </h1>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <img src="img/colorkey.png" alt="Keys" height="300" width="300">
+                    <p id="ingameinfo">Current time: currentTime</p>
+                    <p id="ingameinfo">{{getQuestionNumber()}}/20 completed</p>
+                    <button type="button" class="btn btn-success btn-lg outline" a-href="./gameuser.html" align="left">Restart</button>
+                    <button type="button" class="btn btn-success btn-lg outline" a-href="./tutorial.html" align="right">Back to tutorial</button>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+    </section>
+    </div>
+    
+<footer>
+    Designed by HyperStroop
+</footer>
+</body>
+</html>
