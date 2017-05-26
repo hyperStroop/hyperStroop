@@ -91,19 +91,17 @@ footer {
     font-size: 70px;
     font-family: 'Raleway', "Yu Gothic UI Semilight", Arial, sans-serif;
     font-variant: all-small-caps;
-    -webkit-animation:colorchange 6s infinite alternate;
+    -webkit-animation:colorchange 10s infinite;
 }
 
 @-webkit-keyframes colorchange {
-    0% {
-        color: white;
-    }
-    33% {
-        color: lightgray;
-    }
-    66% {
-        color: gray;
-    }
+    0% {color: white;}
+    16% {color: yellow;}
+    30% {color: orange;}
+    44% {color: red;}
+    58% {color: green;}
+    72% {color: blue;}
+    86% {color: purple;}
 }
 
 /***********************
