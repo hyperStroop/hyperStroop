@@ -50,6 +50,10 @@ nav a:hover, a:focus {
     font-size: 15px;
 }
 
+#header p {
+    color: white;
+}
+
 #tutorial {
     padding-top: 4em;
 }
