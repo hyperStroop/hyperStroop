@@ -43,7 +43,7 @@
     </div>
 
     <section id="example">
-        <div class="container">
+        <div class="container" id="hideExample">
             <div class="row">
                 <div class="col-md-4"><p>A question will be prompted</p></div>
                 <div class="col-md-4"><p>You press the corresponding key</p></div>
@@ -62,7 +62,7 @@
     <section id="hideTutorial">
         <div class="container">
             <div class="col-md-12">
-                <label><input type='checkbox' onclick='handleClick(this);'> Hide Tutorial</label>
+                <label><input type='checkbox' onclick='handleClick();'> Hide Tutorial</label>
             </div>
         </div>
     </section>
@@ -97,6 +97,17 @@
 <footer>
     Designed by HyperStroop
 </footer>
+
+    <script>
+        function handleClick() {
+            var x = document.getElementById('hideExample');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
 
