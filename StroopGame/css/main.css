@@ -91,7 +91,7 @@ footer {
     font-size: 70px;
     font-family: 'Raleway', "Yu Gothic UI Semilight", Arial, sans-serif;
     font-variant: all-small-caps;
-    -webkit-animation:colorchange 10s infinite;
+    -webkit-animation:colorchange 18s infinite;
 }
 
 @-webkit-keyframes colorchange {
