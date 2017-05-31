@@ -7,7 +7,7 @@ import {Controller} from './controller';
 export class View {
   //constants for access
 //   readonly canvas = <HTMLCanvasElement>$('#graphics-view canvas')[0];
-    readonly document = <HTMLElement>$('#game-view')[0];
+   // readonly document = <HTMLElement>$('#game-view')[0];
 
   private selected:KeyType; //selected state is handled by View
   private action:string; //what action we are doing (handled by View)
@@ -15,10 +15,10 @@ export class View {
 
   constructor(private model:Model){
     //event listeners (DOM for readability/speed)
-    this.document.addEventListener('onkeydown', (e) => {this.handleKeyDown(e)});
-    this.document.addEventListener('mousedown', (e) => {this.handleMouseDown(e)});
+    // this.document.addEventListener('onkeydown', (e) => {this.handleKeyDown(e)});
+    // this.document.addEventListener('mousedown', (e) => {this.handleMouseDown(e)});
 
-    let newGame = $("#newgame");
+    // let newGame = $("#newgame");
     //this.action = optionButtons.val(); //current (initial) selection    
     //optionButtons.change((e) => { this.action = $(e.target).val();  console.log(this.action); }); //update action
 
@@ -36,7 +36,7 @@ export class View {
     let questions = this.model.getQuestions(); //read from the model
   }
 
-  handleKeyDown(event:MouseEvent){
+  handleKeyDown(event:KeyboardEvent){
     //console.log("view handle key down");
     this.ctrl.handleKeyDown(event);
   }  
