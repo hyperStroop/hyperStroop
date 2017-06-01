@@ -4,13 +4,11 @@ export class Model implements Subject {
   private currentQuestion:Question;
   private currentTime:number;
   private currentScore:number;
-  private firstGame:boolean;
   private lastAnswer:boolean;
   private startTime:number;
 
   constructor() {
     this.reset(); //reset the game
-    this.firstGame = true;
   }
 
   /**
@@ -20,7 +18,6 @@ export class Model implements Subject {
   reset(){
     this.currentScore = 0;
     this.currentTime = 0;
-    this.firstGame = false;
     this.lastAnswer = false;
     this.startTime = new Date().getTime();
     this.roundQuestions = this.newQuestions();
@@ -43,10 +40,6 @@ export class Model implements Subject {
 
   getQuestions():Question[] {
     return this.roundQuestions;    
-  }
-
-  getFirstGame():boolean {
-    return this.firstGame;
   }
 
   getCurrentQuestion():Question {
