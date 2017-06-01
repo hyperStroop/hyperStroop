@@ -7,7 +7,7 @@ import {Controller} from './controller';
 export class View {
   //constants for access
 //   readonly canvas = <HTMLCanvasElement>$('#graphics-view canvas')[0];
-    readonly document = <HTMLElement>$('#game-view')[0];
+    readonly document = document.getElementsByTagName('body')[0];
 
   private selected:KeyType; //selected state is handled by View
   private action:string; //what action we are doing (handled by View)
