@@ -43,7 +43,7 @@
     </div>
 
     <section id="example">
-        <div class="container">
+        <div class="container" id="hideExample">
             <div class="row">
                 <div class="col-md-4"><p>A question will be prompted</p></div>
                 <div class="col-md-4"><p>You press the corresponding key</p></div>
@@ -53,7 +53,16 @@
             <div class="row">
                 <div class="col-md-4"><img src="img/questions.png" alt="questions" height="300" width="325"></div>
                 <div class="col-md-4"><img src="img/keys.png" alt="keys" height="300" width="325"></div>
-                <div class="col-md-4"><img src="img/answers.png" alt="answers" height="300" width="325"></div>
+                <div class="col-md-4"><img src="img/answers.png" alt="answers" height="300" width="325">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hideTutorial">
+        <div class="container">
+            <div class="col-md-12">
+                <label><input type='checkbox' onclick='handleClick();'> Hide Tutorial</label>
             </div>
         </div>
     </section>
@@ -61,7 +70,7 @@
     <section id="startButton">
         <div class="container">
             <div class="col-md-4"></div>
-            <div class="col-md-4"><button type="button" class="btn btn-success btn-block">Start</button></div>
+            <div class="col-md-4"><button type="button" class="btn btn-success btn-block" onclick="location.href='gameuser.html'">Start</button></div>
             <div class="col-md-4"></div>
         </div>
     </section>
@@ -88,6 +97,17 @@
 <footer>
     Designed by HyperStroop
 </footer>
+
+    <script>
+        function handleClick() {
+            var x = document.getElementById('hideExample');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
 

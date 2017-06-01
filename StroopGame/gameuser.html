@@ -13,8 +13,9 @@
 <body>
 
     <nav>
-         <ul>
-             <a href="./gameuser.html">hyperStroop</a>
+        <ul>
+            <a href="./index.html"><img src="img/icon.png" style="margin-top:-3px"></a>
+            <a href="./index.html">HyperStroop</a>
         </ul>
     </nav>
 
@@ -41,12 +42,30 @@
                 <p id="ingameinfo">{{getQuestionNumber()}}/20 completed</p>
                 
                 <section id="startButton">
-                    <button type="button" class="btn btn-success btn-lg outline" a-href="./gameuser.html">Restart</button>
-                    <button type="button" class="btn btn-success btn-lg outline" a-href="./tutorial.html">Back to tutorial</button>
+                    <button type="button" class="btn btn-success btn-lg outline" onclick="location.href='gameuser.html'">Restart</button>
+                    <button type="button" class="btn btn-success btn-lg outline" onclick="location.href='index.html'">Back to tutorial</button>
                 </section>
             </div>
         </div>
     </section>
 
+    <section id="legend">
+        <div class="container">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><p>Key Bindings</p></div>
+            <div class="col-md-4"></div>
+        </div>
+    </section>
+
+    <section id="keyboard">
+        <div class="container">
+            <div class="col-md-11">
+                <img src="img/keyboard.png" alt="Keys" height="200" width="600">
+            </div>
+            <div class="col-md-1">
+                <img src="img/colorkey.png" alt="Keys" height="200" width="200" align="right">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
