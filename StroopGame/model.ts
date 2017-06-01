@@ -45,7 +45,7 @@ export class Model implements Subject {
     return this.currentQuestion;
   }
 
-  getTimeLeft():number {
+  getTime():number {
     let distance = new Date().getTime() - this.startTime;
     let currentTime = Math.floor(distance);
 
