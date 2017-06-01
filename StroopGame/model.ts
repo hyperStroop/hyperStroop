@@ -31,6 +31,10 @@ export class Model implements Subject {
     return this.roundQuestions;    
   }
 
+  getFirstGame():boolean {
+    return this.firstGame;
+  }
+
   getCurrentQuestion():Question {
     return this.roundQuestions.pop();
   }

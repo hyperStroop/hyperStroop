@@ -39,6 +39,9 @@ var Model = (function () {
     Model.prototype.getQuestions = function () {
         return this.roundQuestions;
     };
+    Model.prototype.getFirstGame = function () {
+        return this.firstGame;
+    };
     Model.prototype.getCurrentQuestion = function () {
         return this.roundQuestions.pop();
     };
