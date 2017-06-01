@@ -26,18 +26,6 @@ export class Model implements Subject {
     this.notifyAll();
   }
 
-  /**
-   * Creates a new list of questions. 
-   * @returns the list of questions.
-   */
-  newQuestions():Question[]{
-    for(var i = 0; i < 20; i++){
-        let created = new QuestionFactory().createQuestion();
-        this.roundQuestions.push(created);
-    }
-    return this.roundQuestions;
-  }
-
   getQuestions():Question[] {
     return this.roundQuestions;    
   }
@@ -57,6 +45,18 @@ export class Model implements Subject {
     //document.getElementById("timer").innerHTML = "Time left: " + currentTime;
 
     return currentTime;
+  }
+
+  /**
+   * Creates a new list of questions. 
+   * @returns the list of questions.
+   */
+  newQuestions():Question[]{
+    for(var i = 0; i < 20; i++){
+        let created = new QuestionFactory().createQuestion();
+        this.roundQuestions.push(created);
+    }
+    return this.roundQuestions;
   }
   
   /**
