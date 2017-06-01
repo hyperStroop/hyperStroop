@@ -1,5 +1,6 @@
 import {Model} from './model';
 import {View} from './game-view';
+// import * as $ from 'jquery';
 
 export class Controller {
     constructor(private model:Model, private view:View) {
@@ -10,6 +11,20 @@ export class Controller {
     start() {
         this.view.display();
     }
+
+    $(document).ready(function() {
+        $(document).bind('keydown', function(e) {
+            if (e.keyCode == 32) { //spacebar
+                this.model.checkQuesion("purple");
+            } else if (e.keyCode == 70) { //"F" key
+                this.model.checkQuestion("green");
+            } else if (e.keyCode == 74) { //"J" key
+                this.model.checkQuestion("orange");
+            } else {
+                
+            }
+        })
+    });
 
     handleKeyDown(event:KeyboardEvent){
         let selectedKey = event.keyCode;
