@@ -1,6 +1,7 @@
 export class Model implements Subject {
   private roundQuestions:Question[];
   private roundAnswers:boolean[];
+  private currentQuestion:Question;
   private currentTime:number;
   private currentScore:number;
   private firstGame:boolean;
@@ -20,6 +21,7 @@ export class Model implements Subject {
     this.startTime = new Date().getTime();
     this.roundQuestions = this.newQuestions();
     this.roundAnswers = [];
+    this.currentQuestion = this.roundQuestions.pop();
     this.notifyAll();
   }
 
@@ -40,7 +42,7 @@ export class Model implements Subject {
   }
 
   getCurrentQuestion():Question {
-    return this.roundQuestions.pop();
+    return this.currentQuestion;
   }
 
   getTimeLeft():number {
@@ -52,16 +54,6 @@ export class Model implements Subject {
     return currentTime;
   }
   
-  //@param number is the keyboard code for the key that the user entered
-  setSelected(selectedKey:number) {
-    //key codes:         
-        //left arrow: 37
-        //up arrow: 38
-        //right arrow: 39
-        //down arrow: 40
-    //still needs to check to see whether that keycode matches with the correct answer
-  }
-
   checkQuestion(answer:string):boolean {
     let check:boolean = (answer == this.getCurrentQuestion().getAnswer())
     if(check){
@@ -70,6 +62,8 @@ export class Model implements Subject {
 
     this.lastAnswer = check;
     this.roundAnswers.push(check);
+    this.currentQuestion = this.roundQuestions.pop();
+    this.notifyAll();
     return check;
   }
 
