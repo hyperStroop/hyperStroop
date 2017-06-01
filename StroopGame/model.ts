@@ -4,19 +4,20 @@ export class Model implements Subject {
   private currentQuestion:Question;
   private currentTime:number;
   private currentScore:number;
-  private firstGame:boolean;
   private lastAnswer:boolean;
   private startTime:number;
 
   constructor() {
     this.reset(); //reset the game
-    this.firstGame = true;
   }
 
+  /**
+   * Resets the game to new game.
+   * First game booleans stays false.
+   */
   reset(){
     this.currentScore = 0;
     this.currentTime = 0;
-    this.firstGame = false;
     this.lastAnswer = false;
     this.startTime = new Date().getTime();
     this.roundQuestions = this.newQuestions();
@@ -25,26 +26,18 @@ export class Model implements Subject {
     this.notifyAll();
   }
 
-  newQuestions():Question[]{
-    for(var i = 0; i < 20; i++){
-        let created = new QuestionFactory().createQuestion();
-        this.roundQuestions.push(created);
-    }
-    return this.roundQuestions;
-  }
-
   getQuestions():Question[] {
     return this.roundQuestions;    
-  }
-
-  getFirstGame():boolean {
-    return this.firstGame;
   }
 
   getCurrentQuestion():Question {
     return this.currentQuestion;
   }
 
+  /**
+   * Figures out the current time elapsed.
+   * @returns the time elapsed since game start.
+   */
   getTime():number {
     let distance = new Date().getTime() - this.startTime;
     let currentTime = Math.floor(distance);
@@ -53,7 +46,25 @@ export class Model implements Subject {
 
     return currentTime;
   }
+
+  /**
+   * Creates a new list of questions. 
+   * @returns the list of questions.
+   */
+  newQuestions():Question[]{
+    for(var i = 0; i < 20; i++){
+        let created = new QuestionFactory().createQuestion();
+        this.roundQuestions.push(created);
+    }
+    return this.roundQuestions;
+  }
   
+  /**
+   * Checks to see if the user's answer matches the question's answer.
+   * Updates the score, last answer boolean, current question, list of answers.
+   * @param is the user's answer as a string (purple, orange, or green)
+   * @returns whether their answer was true or false.
+   */
   checkQuestion(answer:string):boolean {
     let check:boolean = (answer == this.getCurrentQuestion().getAnswer())
     if(check){
@@ -67,9 +78,6 @@ export class Model implements Subject {
     return check;
   }
 
-  unselect() {
-    //reset to go to the next card
-  }
 
   // Subject methods (Observer pattern)
   private observers:Observer[] = [];
