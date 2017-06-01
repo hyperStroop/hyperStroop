@@ -1,9 +1,11 @@
 export class Model implements Subject {
   private roundQuestions:Question[];
+  private roundAnswers:boolean[];
   private currentTime:number;
   private currentScore:number;
   private firstGame:boolean;
   private lastAnswer:boolean;
+  private startTime:number;
 
   constructor() {
     this.reset(); //reset the game
@@ -15,7 +17,9 @@ export class Model implements Subject {
     this.currentTime = 0;
     this.firstGame = false;
     this.lastAnswer = false;
+    this.startTime = new Date().getTime();
     this.roundQuestions = this.newQuestions();
+    this.roundAnswers = [];
     this.notifyAll();
   }
 
@@ -38,6 +42,15 @@ export class Model implements Subject {
   getCurrentQuestion():Question {
     return this.roundQuestions.pop();
   }
+
+  getTimeLeft():number {
+    let distance = new Date().getTime() - this.startTime;
+    let currentTime = Math.floor(distance);
+
+    //document.getElementById("timer").innerHTML = "Time left: " + currentTime;
+
+    return currentTime;
+  }
   
   //@param number is the keyboard code for the key that the user entered
   setSelected(selectedKey:number) {
@@ -50,39 +63,19 @@ export class Model implements Subject {
   }
 
   checkQuestion(answer:string):boolean {
-    if(answer == this.getCurrentQuestion().getAnswer()){
-      this.lastAnswer = true;
+    let check:boolean = (answer == this.getCurrentQuestion().getAnswer())
+    if(check){
       this.currentScore += 1;
-      return true;
     }
-    else {
-      this.lastAnswer = false;
-      return false;
-    }
+
+    this.lastAnswer = check;
+    this.roundAnswers.push(check);
+    return check;
   }
 
   unselect() {
     //reset to go to the next card
   }
-
-  // getShapeAt(x:number, y:number):Shape{
-  //   let found:Shape;
-  //   for(let shape of this.shapes){
-  //     if(shape.contains(x,y)){
-  //       found = shape;
-  //     }
-  //   }
-  //   return found; //return last shape
-  // }
-
-  // //TODO: Add more methods...
-  
-
-  // updateText(shape, index):void{
-  //   this.shapes[index].updateProperties(shape);
-  //   let updateShape = this.shapes[index];
-  //   this.notifyAll();
-  // }
 
   // Subject methods (Observer pattern)
   private observers:Observer[] = [];
