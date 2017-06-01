@@ -8,7 +8,7 @@
     * Keys will have predetermined colors mapped with it. Will be shown on the screen for constant referencing. **COMPLETE**
 ### Page 1: Landing page/Tutorial requirements
 1. Instructions & example of how to play the game is shown **COMPLETE**
-2. Store boolean so that tutorial is automatically shown only once per machine **INCOMPLETE**
+2. Store boolean so that tutorial is automatically shown only once per machine **COMPLETE**
     * Allow the user to skip/hide the written tutorial **COMPLETE**
 3. Create a 'start' button to notify the game when the user is ready, then show a countdown on the screen before the game begins **COMPLETE**
     * Will trigger if clicked by a mouse **COMPLETE**
