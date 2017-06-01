@@ -7,7 +7,7 @@
     <link rel="icon" href="img/page-icon.png">
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="game-manager.ts"></script>
+    <script src="controller.js"></script>
 </head>
 
 <body>
@@ -28,25 +28,25 @@
     </section>
     
     <section id="gameplay">
-        <div class="row">
+<!--        <div class="row">-->
             <div class="col-sm-8">
                 <h1 id="gametext" class="text-center">
-                        getQuestions()
+                        {{model.getQuestions()}}
                 </h1>
             </div>
             <div class="col-sm-4">
-                <p id="keys1">Press <b>F</b> for {{color1}}</p>
-                <p id="keys2"><b>J</b> for {{color2}}</p>
-                <p id="keys2"><b>SPACE</b> for {{color3}} </p>
+<!--                <div class="container">-->
+<!--                    <img src="img/colorkey.png" alt="Keys" height="200" width="200" align="right">-->
+<!--                </div>-->
                 <p id="ingameinfo">Current time: {{getTime()}}</p>
                 <p id="ingameinfo">{{getQuestionNumber()}}/20 completed</p>
                 
                 <section id="startButton">
-                    <button type="button" class="btn btn-success btn-lg outline" onclick="location.href='gameuser.html'">Restart</button>
+                    <button type="button" class="btn btn-success btn-lg outline" onclick="location.href='gameuser.html'">New Game</button>
                     <button type="button" class="btn btn-success btn-lg outline" onclick="location.href='index.html'">Back to tutorial</button>
                 </section>
             </div>
-        </div>
+<!--        </div>-->
     </section>
 
     <section id="legend">
