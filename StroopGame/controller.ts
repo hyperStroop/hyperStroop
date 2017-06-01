@@ -12,8 +12,9 @@ export class Controller {
         this.view.display();
     }
 
-    $(document).ready(function() {
-        $(document).bind('keydown', function(e) {
+    handleKeyDown(e:KeyboardEvent) {
+       // $(document).ready(function() {
+       // $(document).bind('keydown', function(e) {
             if (e.keyCode == 32) { //spacebar
                 this.model.checkQuesion("purple");
             } else if (e.keyCode == 70) { //"F" key
@@ -23,8 +24,9 @@ export class Controller {
             } else {
                 
             }
-        })
-    });
+       // })
+    };
+
 
     handleKeyDown(event:KeyboardEvent){
         let selectedKey = event.keyCode;
