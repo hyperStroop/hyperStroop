@@ -39,16 +39,16 @@
     * Will disappear once game is restarted or exited **COMPLETE**
 #### Summary View
 1. Summary screen replaces the gameplay screen (still on the same page) **INCOMPLETE**
-2. Present the user with their questions so they know which ones they got wrong **INCOMPLETE**
-3. Show the ratio of correct/total and converted percentage **INCOMPLETE**
-4. Show the top 5 global scores **INCOMPLETE**
-    * If the user's score is better than any of the top 5, a textbox will be available for the user to enter a user name **INCOMPLETE**
+2. Present the user with their questions so they know which ones they got wrong **COMPLETE**
+3. Show the ratio of correct/total and converted percentage **COMPLETE**
+4. Show the top 5 global scores **COMPLETE**
+    * If the user's score is better than any of the top 5, a textbox will be available for the user to enter a user name **COMPLETE**
 ### Scorekeeping requirements: 
 1. Store all questions that were prompted **COMPLETE**
 2. Store all valid keys that were pressed with the corresponding questions **COMPLETE**
 3. Store user accuracy **COMPLETE**
     * Ratio of correct/total & converted percentage **COMPLETE**
 4. Time recorded for each question and total time of the full game **COMPLETE**
-5. Leaderboard of top 5 global scores **INCOMPLETE**
-    * Firebase **INCOMPLETE**
+5. Leaderboard of top 5 global scores **COMPLETE**
+    * Firebase **COMPLETE**
 6. Develop an algorithm that incorporates both speed and accuracy for the summary review screen **COMPLETE**
