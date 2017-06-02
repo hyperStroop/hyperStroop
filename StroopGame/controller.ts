@@ -11,18 +11,25 @@ export class Controller {
         this.view.display();
     }
 
-    handleKeypress(event:KeyboardEvent, action:string){
+    handleKeypress(event:KeyboardEvent){
         let selectedKey = event.keyCode;
         //key codes:         
         //left arrow: 37
         //up arrow: 38
         //right arrow: 39
         //down arrow: 40
-        this.model.setSelected(event.keyCode);
+        //f: 70
+        //j: 74
+        //space: 32
+
+        if(selectedKey === 70){
+            this.model.checkQuestion('green');
+        } 
+        else if(selectedKey === 74){
+            this.model.checkQuestion('orange');   
+        }
+        else if(selectedKey === 32){
+            this.model.checkQuestion('purple');
+        }
     }
-
-    handleKeyUp(event:MouseEvent) {
-        this.model.unselect();
-    } 
-
 }
