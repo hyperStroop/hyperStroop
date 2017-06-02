@@ -17,7 +17,7 @@ export class View {
 
   constructor(private model:Model){
     //event listeners (DOM for readability/speed)
-    this.document.addEventListener('keypress', (e) => {this.handleKeyDown(e, this.action)});
+    this.document.addEventListener('keypress', (e) => {this.handleKeypress(e, this.action)});
 
     // let newGame = $("#newgame");
     //this.action = optionButtons.val(); //current (initial) selection    
@@ -37,9 +37,9 @@ export class View {
     let questions = this.model.getQuestions(); //read from the model
   }
 
-  handleKeyDown(event:KeyboardEvent, action:string){
+  handleKeypress(event:KeyboardEvent, action:string){
     //console.log("view handle key down");
-    this.ctrl.handleKeyDown(event);
+    this.ctrl.handleKeypress(event, action);
   }  
 
   handleMouseDown(event:MouseEvent){

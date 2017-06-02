@@ -11,7 +11,7 @@ export class Controller {
         this.view.display();
     }
 
-    handleKeyDown(event:KeyboardEvent){
+    handleKeypress(event:KeyboardEvent, action:string){
         let selectedKey = event.keyCode;
         //key codes:         
         //left arrow: 37
