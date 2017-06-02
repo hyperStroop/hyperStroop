@@ -197,5 +197,10 @@ footer {
     height: 75px;
 }
 
+#grid {
+    padding-left: 0px;
+}
 
-
+#results h2 {
+    text-align: center; 
+}
