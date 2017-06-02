@@ -34,14 +34,28 @@
     <section id="results">
         <div class="container">
             <div class="col-md-4">
-                <ol id="show"></ol>
+                <h2> Performance </h2>
+                <div id="grid" class="container">
+                    <div class="col-md-1">
+                        <ol id="one"></ol>
+                    </div>
+                    <div class="col-md-1">
+                        <ol id="two"></ol>
+                    </div>
+                    <div class="col-md-1">
+                        <ol id="three"></ol>
+                    </div>
+                    <div class="col-md-1">
+                        <ol id="four"></ol>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
                 <div id="score"></div>
             </div>
             <div class="col-md-4">
                 <h2> Top 5 Stroopers </h2>
-                <ul id="board"></ul>
+                <ol id="board"></ol>
             </div>
         </div>
     </section>
@@ -107,7 +121,16 @@
             response.className = grade[0];
             symbol.className = grade[1];
             response.appendChild(symbol);
-            document.getElementById("show").append(response);
+
+            if (i % 4 == 0) {
+                document.getElementById("one").append(response);
+            } else if ((i + 4) % 4 == 1) {
+                document.getElementById("two").append(response);
+            } else if ((i + 4) % 4 == 2) {
+                document.getElementById("three").append(response);
+            } else {
+                document.getElementById("four").append(response);
+            }
 
             if (fullReport[i]) {
                 correct++;
@@ -178,7 +201,7 @@
     function writeUserData(name) {
         firebase.database().ref('leaderboard/').push({
             username: name,
-            score: 300 // used for testing 
+            score: 430 // used for testing 
         });
     }
 

@@ -117,6 +117,7 @@ footer {
     58% {color: green;}
     72% {color: blue;}
     86% {color: purple;}
+    98% {color: lightcyan;}
 }
 
 /***********************
@@ -197,5 +198,10 @@ footer {
     height: 75px;
 }
 
+#grid {
+    padding-left: 0px;
+}
 
-
+#results h2 {
+    text-align: center; 
+}
