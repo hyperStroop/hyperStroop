@@ -9,17 +9,25 @@ var Controller = (function () {
     Controller.prototype.start = function () {
         this.view.display();
     };
-    Controller.prototype.handleKeyDown = function (event) {
+    Controller.prototype.handleKeypress = function (event) {
         var selectedKey = event.keyCode;
         //key codes:         
         //left arrow: 37
         //up arrow: 38
         //right arrow: 39
         //down arrow: 40
-        this.model.setSelected(event.keyCode);
-    };
-    Controller.prototype.handleKeyUp = function (event) {
-        this.model.unselect();
+        //f: 70
+        //j: 74
+        //space: 32
+        if (selectedKey === 70) {
+            this.model.checkQuestion('green');
+        }
+        else if (selectedKey === 74) {
+            this.model.checkQuestion('orange');
+        }
+        else if (selectedKey === 32) {
+            this.model.checkQuestion('purple');
+        }
     };
     return Controller;
 }());
