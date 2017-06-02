@@ -1,13 +1,15 @@
 import {Model} from './model';
 import {Controller} from './controller';
 
+var $ = require("jquery");
+
 /**
  * A class to represent the View. Contains control buttons and an HTML5 canvas.
  */
 export class View {
   //constants for access
 //   readonly canvas = <HTMLCanvasElement>$('#graphics-view canvas')[0];
-   // readonly document = <HTMLElement>$('#game-view')[0];
+  readonly document = <HTMLElement>$('#game-view')[0];
 
   private selected:KeyType; //selected state is handled by View
   private action:string; //what action we are doing (handled by View)
@@ -15,8 +17,7 @@ export class View {
 
   constructor(private model:Model){
     //event listeners (DOM for readability/speed)
-    // this.document.addEventListener('onkeydown', (e) => {this.handleKeyDown(e)});
-    // this.document.addEventListener('mousedown', (e) => {this.handleMouseDown(e)});
+    this.document.addEventListener('keypress', (e) => {this.handleKeypress(e)});
 
     // let newGame = $("#newgame");
     //this.action = optionButtons.val(); //current (initial) selection    
@@ -36,14 +37,14 @@ export class View {
     let questions = this.model.getQuestions(); //read from the model
   }
 
-  handleKeyDown(event:KeyboardEvent){
+  handleKeypress(event:KeyboardEvent){
     //console.log("view handle key down");
-    this.ctrl.handleKeyDown(event);
+    this.ctrl.handleKeypress(event);
   }  
 
   handleMouseDown(event:MouseEvent){
     //console.log(" view handle key up");
-    this.ctrl.handleKeyUp(event);   
+    //this.ctrl.handleKeyUp(event);   
   }
 
   //make game responsive

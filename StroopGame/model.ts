@@ -1,4 +1,5 @@
 export class Model implements Subject {
+  private allQuestions:Question[];
   private roundQuestions:Question[];
   private roundAnswers:boolean[];
   private currentQuestion:Question;
@@ -22,6 +23,7 @@ export class Model implements Subject {
     this.startTime = new Date().getTime();
     this.roundQuestions = this.newQuestions();
     this.roundAnswers = [];
+    this.allQuestions = this.roundQuestions;
     this.currentQuestion = this.roundQuestions.pop();
     this.notifyAll();
   }
@@ -32,6 +34,14 @@ export class Model implements Subject {
 
   getCurrentQuestion():Question {
     return this.currentQuestion;
+  }
+
+  getRoundAnswers():boolean[] {
+    return this.roundAnswers;
+  }
+
+  getAllQuestions():Question[] {
+    return this.allQuestions;
   }
 
   /**
