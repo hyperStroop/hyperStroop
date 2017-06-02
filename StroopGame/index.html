@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="checkCookie()">
     <nav>
          <ul>
              <a href="./index.html"><img src="img/icon.png" style="margin-top:-3px"></a>
@@ -62,7 +62,7 @@
     <section id="hideTutorial">
         <div class="container">
             <div class="col-md-12">
-                <label><input type='checkbox' onclick='handleClick();'> Hide Tutorial</label>
+                <label><input type='checkbox' id="myCheck" onclick='handleClick();'> Hide Tutorial</label>
             </div>
         </div>
     </section>
@@ -107,7 +107,47 @@
                 x.style.display = 'none';
             }
         }
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            //document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            var user = getCookie("username");
+            if (user !== "") {
+                // alert("Welcome again " + user);
+                var x = document.getElementById('hideExample');
+                x.style.display = 'none';
+                document.getElementById("myCheck").checked = true;
+            } else {
+                user = "test";
+                if (user !== "" && user !== null) {
+                    setCookie("username", user, 365);
+                }
+                x.style.display = 'block';
+            }
+        }
     </script>
+
 </body>
 </html>
 
