@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--  <script src="controller.js"></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hyperStroop</title>
+    <link rel="icon" href="img/page-icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body onload="getResults()">
+
+    <nav>
+        <ul>
+            <a href="./index.html"><img src="img/icon.png" style="margin-top:-3px"></a>
+            <a href="./index.html">HyperStroop</a>
+        </ul>
+    </nav>
+
+    <div id="top">
+        <section id="header">
+            <div class="container">
+                <div class="col-md-12">
+                    <h1 class="colorTransition">RESULTS</h1>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="results">
+        <div class="container">
+            <div class="col-md-4">
+                <h2> Performance </h2>
+                <div id="grid" class="container">
+                    <div class="col-md-1">
+                        <ol id="one"></ol>
+                    </div>
+                    <div class="col-md-1">
+                        <ol id="two"></ol>
+                    </div>
+                    <div class="col-md-1">
+                        <ol id="three"></ol>
+                    </div>
+                    <div class="col-md-1">
+                        <ol id="four"></ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="score"></div>
+            </div>
+            <div class="col-md-4">
+                <h2> Top 5 Stroopers </h2>
+                <ol id="board"></ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="enterScore" style="visibility: hidden;">
+        <h2> Congrats you are a super strooper </h2>
+        <input id="enter" type="text">
+        <input type="button" value="Enter name" onclick="enterName()">
+    </section>
+
+    <section id="legend">
+        <div class="container">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <p>Key Bindings</p>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </section>
+
+    <section id="keyboard">
+        <div class="container">
+            <div class="col-md-11">
+                <img src="img/keyboard.png" alt="Keys" height="200" width="600">
+            </div>
+            <div class="col-md-1">
+                <img src="img/colorkey.png" alt="Keys" height="200" width="200" align="right">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Designed by HyperStroop
+    </footer>
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.0/firebase.js"></script>
+<script>
+    var config = {
+        apiKey: "AIzaSyBR_LPs3ELjjakiCMlErReylUJlOVEKr04",
+        authDomain: "hyperstroop.firebaseapp.com",
+        databaseURL: "https://hyperstroop.firebaseio.com",
+        projectId: "hyperstroop",
+        storageBucket: "hyperstroop.appspot.com",
+        messagingSenderId: "787899637933"
+    };
+    firebase.initializeApp(config);
+
+    var database = firebase.database();
+
+    var fullReport = [true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]; // sample input from controller, expecting array of booleans length 20 
+
+    function getResults() {
+        var correct = 0;
+        for (i = 0; i < fullReport.length; i++) {
+            var response = document.createElement('li');
+            var symbol = document.createElement('i');
+
+            var grade = resultHelper(fullReport[i]);
+
+            response.className = grade[0];
+            symbol.className = grade[1];
+            response.appendChild(symbol);
+
+            if (i % 4 == 0) {
+                document.getElementById("one").append(response);
+            } else if ((i + 4) % 4 == 1) {
+                document.getElementById("two").append(response);
+            } else if ((i + 4) % 4 == 2) {
+                document.getElementById("three").append(response);
+            } else {
+                document.getElementById("four").append(response);
+            }
+
+            if (fullReport[i]) {
+                correct++;
+            }
+        }
+        var ratio = correct / 20;
+        var rate = document.createElement('h2');
+        var percent = document.createTextNode(ratio * 100 + "% " + correct + "/" + 20 + " Score 56");
+        rate.appendChild(percent);
+        document.getElementById("score").append(rate);
+    }
+
+    // accepts user's response to a given question as a boolean 
+    // returns a class for coloring the response and the type of icon 
+    function resultHelper(answer) {
+        if (answer) {
+            return ["correct", "fa fa-check"];
+        } else {
+            return ["wrong", "fa fa-times"];
+        }
+    }
+
+    // reference to database 
+    var query = database.ref().child('leaderboard').orderByKey();
+
+    // calls snapshot from fireabase database
+    //  
+    query.once("value")
+        .then(function (snapshot) {
+            var leaders = [];
+            snapshot.forEach(function (childSnapshot) {
+                var childData = childSnapshot.val();
+                var somebody = [childData.username, childData.score];
+                leaders.push(somebody);
+            });
+            leaders.sort(function (a, b) {
+                return b[1] - a[1];
+            });
+            createBoard(leaders);
+        });
+
+    // accepts list of leaderboard name and scores as a parameter 
+    // creates a list element for each member of the top 5
+    // if the users score is higher than the top 5 they are prompted to enter the name  
+    function createBoard(leaders) {
+        for (i = 0; i < 5; i++) {
+            var user = document.createElement('li');
+            var info = document.createTextNode(leaders[i]);
+            user.appendChild(info);
+            document.getElementById("board").append(user);
+        }
+        var score = 400; // used for testing 
+        var allowEntry = document.getElementById('enterScore');
+        if (score > leaders[4][1]) {
+            allowEntry.style.visibility = 'visible';
+        }
+    }
+
+    // retrieves username from DOM 
+    // passes to write function for firebase 
+    function enterName() {
+        var name = document.getElementById("enter").value;
+        writeUserData(name);
+    }
+
+    // accepts username of new top 5 member 
+    // updates firebase with the latest score
+    function writeUserData(name) {
+        firebase.database().ref('leaderboard/').push({
+            username: name,
+            score: 430 // used for testing 
+        });
+    }
+
+</script>

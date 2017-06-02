@@ -1,13 +1,17 @@
 "use strict";
+var $ = require("jquery");
 /**
  * A class to represent the View. Contains control buttons and an HTML5 canvas.
  */
 var View = (function () {
     function View(model) {
-        //event listeners (DOM for readability/speed)
-        // this.document.addEventListener('onkeydown', (e) => {this.handleKeyDown(e)});
-        // this.document.addEventListener('mousedown', (e) => {this.handleMouseDown(e)});
+        var _this = this;
         this.model = model;
+        //constants for access
+        //   readonly canvas = <HTMLCanvasElement>$('#graphics-view canvas')[0];
+        this.document = $('#game-view')[0];
+        //event listeners (DOM for readability/speed)
+        this.document.addEventListener('keypress', function (e) { _this.handleKeypress(e); });
         // let newGame = $("#newgame");
         //this.action = optionButtons.val(); //current (initial) selection    
         //optionButtons.change((e) => { this.action = $(e.target).val();  console.log(this.action); }); //update action
@@ -21,13 +25,13 @@ var View = (function () {
     View.prototype.display = function () {
         var questions = this.model.getQuestions(); //read from the model
     };
-    View.prototype.handleKeyDown = function (event) {
+    View.prototype.handleKeypress = function (event) {
         //console.log("view handle key down");
-        this.ctrl.handleKeyDown(event);
+        this.ctrl.handleKeypress(event);
     };
     View.prototype.handleMouseDown = function (event) {
         //console.log(" view handle key up");
-        this.ctrl.handleKeyUp(event);
+        //this.ctrl.handleKeyUp(event);   
     };
     //make game responsive
     View.prototype.resizeCanvas = function () {

@@ -12,34 +12,25 @@ export class Controller {
         this.view.display();
     }
 
-    handleKeyDown(e:KeyboardEvent) {
-       // $(document).ready(function() {
-       // $(document).bind('keydown', function(e) {
-            if (e.keyCode == 32) { //spacebar
-                this.model.checkQuesion("purple");
-            } else if (e.keyCode == 70) { //"F" key
-                this.model.checkQuestion("green");
-            } else if (e.keyCode == 74) { //"J" key
-                this.model.checkQuestion("orange");
-            } else {
-                
-            }
-       // })
-    };
-
-
-    handleKeyDown(event:KeyboardEvent){
+    handleKeypress(event:KeyboardEvent){
         let selectedKey = event.keyCode;
         //key codes:         
         //left arrow: 37
         //up arrow: 38
         //right arrow: 39
         //down arrow: 40
-        this.model.setSelected(event.keyCode);
+        //f: 70
+        //j: 74
+        //space: 32
+
+        if(selectedKey === 70){
+            this.model.checkQuestion('green');
+        } 
+        else if(selectedKey === 74){
+            this.model.checkQuestion('orange');   
+        }
+        else if(selectedKey === 32){
+            this.model.checkQuestion('purple');
+        }
     }
-
-    handleKeyUp(event:MouseEvent) {
-        this.model.unselect();
-    } 
-
 }
