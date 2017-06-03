@@ -1,8 +1,6 @@
 import {Model} from './model';
 import {Controller} from './controller';
 
-var $ = require("jquery");
-
 /**
  * A class to represent the View. Contains control buttons and an HTML5 canvas.
  */
