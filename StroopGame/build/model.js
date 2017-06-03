@@ -47,11 +47,12 @@ var Model = (function () {
      * @returns the list of questions.
      */
     Model.prototype.newQuestions = function () {
+        var roundQuestions;
         for (var i = 0; i < 20; i++) {
             var created = new QuestionFactory().createQuestion();
-            this.roundQuestions.push(created);
+            roundQuestions.push(created);
         }
-        return this.roundQuestions;
+        return roundQuestions;
     };
     /**
      * Checks to see if the user's answer matches the question's answer.
