@@ -1,4 +1,3 @@
-// import 'bootstrap'; //bootstrap.js for button toggling
 "use strict";
 var model_1 = require("./model");
 var game_view_1 = require("./game-view");
