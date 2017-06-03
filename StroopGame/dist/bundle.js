@@ -73,13 +73,14 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(4); //bootstrap.js for button toggling
+__webpack_require__(4);
 var model_1 = __webpack_require__(3);
 var game_view_1 = __webpack_require__(2);
 var controller_1 = __webpack_require__(1);
 var model = new model_1.Model();
 var view = new game_view_1.View(model);
 var controller = new controller_1.Controller(model, view);
+controller.start();
 
 
 /***/ }),
@@ -89,7 +90,6 @@ var controller = new controller_1.Controller(model, view);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-// import * as $ from 'jquery';
 var Controller = (function () {
     function Controller(model, view) {
         this.model = model;
@@ -156,7 +156,12 @@ var View = (function () {
         this.ctrl = ctrl;
     };
     View.prototype.display = function () {
-        var questions = this.model.getQuestions(); //read from the model
+        var gametext = $('#gametext');
+        gametext.empty();
+        var question = this.model.getCurrentQuestion(); //read from the model
+        console.log(question);
+        gametext.append(question.getColor);
+        gametext.append(question.getWord);
     };
     View.prototype.handleKeypress = function (event) {
         //console.log("view handle key down");
@@ -234,11 +239,12 @@ var Model = (function () {
      * @returns the list of questions.
      */
     Model.prototype.newQuestions = function () {
+        var roundQuestions = [];
         for (var i = 0; i < 20; i++) {
             var created = new QuestionFactory().createQuestion();
-            this.roundQuestions.push(created);
+            roundQuestions.push(created);
         }
-        return this.roundQuestions;
+        return roundQuestions;
     };
     /**
      * Checks to see if the user's answer matches the question's answer.
