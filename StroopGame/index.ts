@@ -1,3 +1,5 @@
+import 'bootstrap';
+
 import {Model} from './model';
 import {View as GameView} from './game-view';
 import {Controller} from './controller'
