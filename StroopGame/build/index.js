@@ -1,4 +1,5 @@
 "use strict";
+require("bootstrap");
 var model_1 = require("./model");
 var game_view_1 = require("./game-view");
 var controller_1 = require("./controller");
