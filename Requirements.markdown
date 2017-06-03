@@ -26,19 +26,19 @@
 2. ‘Back to Tutorial’ button will be available to take the user to the tutorial page **COMPLETE**
 3. Ability to restart the game during and after the game **COMPLETE**
     * a 'new game' button will be available on the right side of the game screen **COMPLETE**
-4. Gameplay screen prompts only one of the given color combinations at a time **INCOMPLETE**
-    * Questions load within 1 second of pressing a mapped key **INCOMPLETE**
+4. Gameplay screen prompts only one of the given color combinations at a time **IN-PROGRESS**
+    * Questions load within 1 second of pressing a mapped key **IN-PROGRESS**
     * All color combinations and answers will be stored locally for runtime performance. **COMPLETE**
 5. Games will consist of 20 randomized questions **COMPLETE**
-    * Timer will be running until the completion of the full 20 questions **INCOMPLETE**
+    * Timer will be running until the completion of the full 20 questions **COMPLETE**
     * The whole instance will reset if page is refreshed or pressing the 'new game' button **COMPLETE**
-6. Let the user know when their answer is correct or incorrect **INCOMPLETE**
-    * Visual cue **INCOMPLETE**
+6. Let the user know when their answer is correct or incorrect **IN-PROGRESS**
+    * Visual cue **IN-PROGRESS**
     * Ratio of correct/total will be shown on the screen up to the current question **COMPLETE**
-7. Summary of the game will be shown in the same place as the gameplay screen (will replace it) **INCOMPLETE**
+7. Summary of the game will be shown in the same place as the gameplay screen (will replace it) **IN-PROGRESS**
     * Will disappear once game is restarted or exited **COMPLETE**
 #### Summary View
-1. Summary screen replaces the gameplay screen (still on the same page) **INCOMPLETE**
+1. Summary screen replaces the gameplay screen (still on the same page) **IN-PROGRESS**
 2. Present the user with their questions so they know which ones they got wrong **COMPLETE**
 3. Show the ratio of correct/total and converted percentage **COMPLETE**
 4. Show the top 5 global scores **COMPLETE**
