@@ -1,4 +1,5 @@
 "use strict";
+
 var Controller = (function () {
     function Controller(model, view) {
         this.model = model;
