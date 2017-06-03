@@ -1,6 +1,5 @@
 import {Model} from './model';
 import {View} from './game-view';
-// import * as $ from 'jquery';
 
 export class Controller {
     constructor(private model:Model, private view:View) {

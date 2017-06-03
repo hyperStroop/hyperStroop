@@ -1,5 +1,4 @@
-var $ = require('jquery');
-//import 'bootstrap'; //bootstrap.js for button toggling
+import 'bootstrap';
 
 import {Model} from './model';
 import {View as GameView} from './game-view';

@@ -8,7 +8,6 @@ module.exports = {
   output: {
     filename: "bundle.js", //combine it into this file
     path: __dirname + '/dist' //in this folder (`__dirname`)
-
   },
 
   //which files should be considered (add in `.ts`)

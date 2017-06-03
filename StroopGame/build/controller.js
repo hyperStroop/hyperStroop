@@ -1,5 +1,4 @@
 "use strict";
-// import * as $ from 'jquery';
 var Controller = (function () {
     function Controller(model, view) {
         this.model = model;
