@@ -1,5 +1,6 @@
-// import 'bootstrap'; //bootstrap.js for button toggling
 "use strict";
+var $ = require('jquery');
+//import 'bootstrap'; //bootstrap.js for button toggling
 var model_1 = require("./model");
 var game_view_1 = require("./game-view");
 var controller_1 = require("./controller");
