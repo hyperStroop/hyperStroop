@@ -67,10 +67,18 @@
         </div>
     </section>
 
+    <section id="countdown">
+        <div class="container" id="showTimer">
+            <div class="col-md-12">
+                <p><span id="countdowntimer">3</span>..</p>
+            </div>
+        </div>
+    </section>
+
     <section id="startButton">
         <div class="container">
             <div class="col-md-4"></div>
-            <div class="col-md-4"><button type="button" class="btn btn-success btn-block" onclick="location.href='gameuser.html'">Start</button></div>
+            <div class="col-md-4"><button type="button" class="btn btn-success btn-block" onclick="theTimer();setTimeout('location.href=\'game-view.html\'', 4000);countdown()">Start</button></div>
             <div class="col-md-4"></div>
         </div>
     </section>
@@ -98,7 +106,7 @@
     Designed by HyperStroop
 </footer>
 
-    <script>
+    <script type="text/javascript">
         function handleClick() {
             var x = document.getElementById('hideExample');
             if (x.style.display === 'none') {
@@ -106,6 +114,21 @@
             } else {
                 x.style.display = 'none';
             }
+        }
+
+        function theTimer() {
+            var x = document.getElementById('countdown');
+            x.style.display = 'block';
+        }
+
+        function countdown() {
+            var timeleft = 3;
+            var downloadTimer = setInterval(function () {
+                timeleft--;
+                document.getElementById("countdowntimer").textContent = timeleft;
+                if (timeleft <= 0)
+                    clearInterval(downloadTimer);
+            }, 1000);
         }
 
         function setCookie(cname, cvalue, exdays) {
