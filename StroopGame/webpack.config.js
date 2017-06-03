@@ -4,13 +4,6 @@ module.exports = {
     './index.ts', 
   ],
 
-  plugins: [
-        new webpack.ProvidePlugin({
-           $: "jquery",
-           jQuery: "jquery"
-       })
-  ],
-
   //where compiled code should go
   output: {
     filename: "bundle.js", //combine it into this file
@@ -26,6 +19,13 @@ module.exports = {
   },  
 
   module: {
+    plugins: [
+       new webpack.ProvidePlugin({
+           $: "jquery",
+           jQuery: "jquery"
+       })
+    ],
+
     loaders: [
       // send `.ts` files through the loader
       { 
