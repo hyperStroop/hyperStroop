@@ -1,5 +1,5 @@
 "use strict";
-global.jQuery = global.$ = require('jquery'); 
+global.jQuery = require('jquery'); 
 require("bootstrap"); //bootstrap.js for button toggling
 var model_1 = require("./model");
 var game_view_1 = require("./game-view");
