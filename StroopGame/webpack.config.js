@@ -19,13 +19,7 @@ module.exports = {
   },  
 
   module: {
-    plugins: [
-       new webpack.ProvidePlugin({
-           $: "jquery",
-           jQuery: "jquery"
-       })
-    ],
-
+    
     loaders: [
       // send `.ts` files through the loader
       { 
