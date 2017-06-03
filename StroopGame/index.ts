@@ -1,4 +1,3 @@
-import 'jQuery';
 import 'bootstrap'; //bootstrap.js for button toggling
 
 import {Model} from './model';
