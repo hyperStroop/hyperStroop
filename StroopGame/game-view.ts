@@ -1,8 +1,6 @@
 import {Model} from './model';
 import {Controller} from './controller';
 
-var $ = require("jquery");
-
 /**
  * A class to represent the View. Contains control buttons and an HTML5 canvas.
  */
@@ -35,8 +33,14 @@ export class View {
   }
 
   display() {
-    let questions = this.model.getQuestions(); //read from the model
-  }
+    let gametext = $('#gametext');
+    gametext.empty();
+
+    let question = this.model.getCurrentQuestion(); //read from the model
+    console.log(question);
+    gametext.append(question.getColor);
+    gametext.append(question.getWord);
+}
 
   handleKeypress(event:KeyboardEvent){
     //console.log("view handle key down");

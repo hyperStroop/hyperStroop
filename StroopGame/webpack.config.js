@@ -19,6 +19,7 @@ module.exports = {
   },  
 
   module: {
+    
     loaders: [
       // send `.ts` files through the loader
       { 

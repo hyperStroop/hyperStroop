@@ -1,5 +1,4 @@
 "use strict";
-var $ = require("jquery");
 /**
  * A class to represent the View. Contains control buttons and an HTML5 canvas.
  */
@@ -23,7 +22,12 @@ var View = (function () {
         this.ctrl = ctrl;
     };
     View.prototype.display = function () {
-        var questions = this.model.getQuestions(); //read from the model
+        var gametext = $('#gametext');
+        gametext.empty();
+        var question = this.model.getCurrentQuestion(); //read from the model
+        console.log(question);
+        gametext.append(question.getColor);
+        gametext.append(question.getWord);
     };
     View.prototype.handleKeypress = function (event) {
         //console.log("view handle key down");
