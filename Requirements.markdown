@@ -18,7 +18,7 @@
 #### Game window
 1. Playable on the different screen sizes listed below **COMPLETE**
     * 1920x1080, 1366x768, 1280x720
-2. Active timer that starts at 0.0s when the game starts after the 3 second countdown mentioned above and shows the first question **INCOMPLETE**
+2. Active timer that starts at 0.0s when the game starts after the 3 second countdown mentioned above and shows the first question **IN-PROGRESS**
 3. Timer cannot be paused while playing the game **COMPLETE**
 4. Game can be restarted to reset the timer and score by clicking 'new game' **COMPLETE**
 #### Gameplay requirements
