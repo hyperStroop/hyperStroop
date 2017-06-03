@@ -62,7 +62,7 @@ export class Model implements Subject {
    * @returns the list of questions.
    */
   newQuestions():Question[]{
-    let roundQuestions:Question[];
+    let roundQuestions:Question[] = [];
     for(var i = 0; i < 20; i++){
         let created:Question = new QuestionFactory().createQuestion();
         roundQuestions.push(created);

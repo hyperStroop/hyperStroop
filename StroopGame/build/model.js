@@ -47,7 +47,7 @@ var Model = (function () {
      * @returns the list of questions.
      */
     Model.prototype.newQuestions = function () {
-        var roundQuestions;
+        var roundQuestions = [];
         for (var i = 0; i < 20; i++) {
             var created = new QuestionFactory().createQuestion();
             roundQuestions.push(created);
