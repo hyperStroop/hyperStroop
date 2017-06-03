@@ -8,3 +8,5 @@ import {Controller} from './controller'
 let model = new Model();
 let view = new GameView(model);
 let controller = new Controller(model, view);
+
+controller.start();
