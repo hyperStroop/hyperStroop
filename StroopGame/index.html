@@ -78,7 +78,7 @@
     <section id="startButton">
         <div class="container">
             <div class="col-md-4"></div>
-            <div class="col-md-4"><button type="button" class="btn btn-success btn-block" onclick="theTimer();setTimeout('location.href=\'game-view.html\'', 4000);countdown()">Start</button></div>
+            <div class="col-md-4"><button type="button" class="btn btn-success btn-block" onclick="theTimer();this.disabled=true;setTimeout('location.href=\'game-view.html\'', 4000);countdown()">Start</button></div>
             <div class="col-md-4"></div>
         </div>
     </section>
@@ -169,6 +169,7 @@
                 x.style.display = 'block';
             }
         }
+
     </script>
 
 </body>
