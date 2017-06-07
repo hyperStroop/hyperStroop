@@ -29,7 +29,7 @@ export class Model implements Subject {
   }
 
   getQuestions():Question[] {
-    return this.roundQuestions;    
+    return this.roundQuestions;
   }
 
   getCurrentQuestion():Question {
@@ -58,7 +58,7 @@ export class Model implements Subject {
   }
 
   /**
-   * Creates a new list of questions. 
+   * Creates a new list of questions.
    * @returns the list of questions.
    */
   newQuestions():Question[]{
@@ -69,7 +69,7 @@ export class Model implements Subject {
     }
     return roundQuestions;
   }
-  
+
   /**
    * Checks to see if the user's answer matches the question's answer.
    * Updates the score, last answer boolean, current question, list of answers.
@@ -80,6 +80,7 @@ export class Model implements Subject {
     let check:boolean = (answer == this.getCurrentQuestion().getAnswer())
     if(check){
       this.currentScore += 1;
+      console.log(this.currentScore);
     }
 
     this.lastAnswer = check;
@@ -100,7 +101,7 @@ export class Model implements Subject {
 
   unsubscribe(observer:Observer){
     let index = this.observers.indexOf(observer);
-    
+
     if(index > -1){
       this.roundQuestions.splice(index, 1);
     }
@@ -148,7 +149,7 @@ export class QuestionFactory {
         let secondRand:number = Math.floor(Math.random() * 3) + 1;
 
         while(firstRand == secondRand) {
-            let secondRand = Math.floor(Math.random() * 3) + 1;
+            secondRand = Math.floor(Math.random() * 3) + 1;
         }
 
         let color1 = this.getColorByNumber(firstRand);

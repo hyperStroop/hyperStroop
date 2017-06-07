@@ -18,10 +18,10 @@ export class View {
 
   constructor(private model:Model){
     //event listeners (DOM for readability/speed)
-    this.document.addEventListener('keypress', (e) => {this.handleKeypress(e)});
+    document.addEventListener('keypress', (e) => {this.handleKeypress(e)});
 
     // let newGame = $("#newgame");
-    //this.action = optionButtons.val(); //current (initial) selection    
+    //this.action = optionButtons.val(); //current (initial) selection
     //optionButtons.change((e) => { this.action = $(e.target).val();  console.log(this.action); }); //update action
 
     //responsive canvas
@@ -40,18 +40,18 @@ export class View {
 
     let question = this.model.getCurrentQuestion(); //read from the model
     console.log(question);
-    gametext.append(question.getColor);
-    gametext.append(question.getWord);
+    gametext.append(question.getColor());
+    gametext.append(question.getWord());
 }
 
   handleKeypress(event:KeyboardEvent){
     //console.log("view handle key down");
     this.ctrl.handleKeypress(event);
-  }  
+  }
 
   handleMouseDown(event:MouseEvent){
     //console.log(" view handle key up");
-    //this.ctrl.handleKeyUp(event);   
+    //this.ctrl.handleKeyUp(event);
   }
 
   //make game responsive
