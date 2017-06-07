@@ -13,7 +13,7 @@ var View = (function () {
         //event listeners (DOM for readability/speed)
         this.document.addEventListener('keypress', function (e) { _this.handleKeypress(e); });
         // let newGame = $("#newgame");
-        //this.action = optionButtons.val(); //current (initial) selection    
+        //this.action = optionButtons.val(); //current (initial) selection
         //optionButtons.change((e) => { this.action = $(e.target).val();  console.log(this.action); }); //update action
         //responsive canvas
         // $(window).resize(() => {this.resizeCanvas()}); //call function on window resize
@@ -36,7 +36,7 @@ var View = (function () {
     };
     View.prototype.handleMouseDown = function (event) {
         //console.log(" view handle key up");
-        //this.ctrl.handleKeyUp(event);   
+        //this.ctrl.handleKeyUp(event);
     };
     //make game responsive
     View.prototype.resizeCanvas = function () {
